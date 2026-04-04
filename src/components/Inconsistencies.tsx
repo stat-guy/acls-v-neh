@@ -66,45 +66,57 @@ export function Inconsistencies() {
         <h2 className="mb-2 text-center text-sm font-semibold uppercase tracking-[0.15em] text-muted-foreground">
           Credibility
         </h2>
-        <h3 className="mb-8 text-center text-3xl font-bold tracking-tight sm:text-4xl">
+        <h3 className="mb-4 text-center text-3xl font-bold tracking-tight sm:text-4xl">
           Claims vs. Evidence
         </h3>
+        <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-muted-foreground leading-relaxed">
+          Comparing what DOGE operatives said under oath with what the documentary evidence shows. Each card pairs a deposition quote with the contradicting document.
+        </p>
 
         {/* Filters */}
-        <div className="mb-8 flex flex-wrap justify-center gap-3">
-          <Select value={witnessFilter} onValueChange={(v) => setWitnessFilter(v ?? "all")}>
-            <SelectTrigger className="w-40">
-              <SelectValue placeholder="Witness" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All Witnesses</SelectItem>
-              {witnesses.map((w) => (
-                <SelectItem key={w} value={w}>{w}</SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          <Select value={typeFilter} onValueChange={(v) => setTypeFilter(v ?? "all")}>
-            <SelectTrigger className="w-40">
-              <SelectValue placeholder="Type" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All Types</SelectItem>
-              {types.map((t) => (
-                <SelectItem key={t} value={t}>{t}</SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-          <Select value={severityFilter} onValueChange={(v) => setSeverityFilter(v ?? "all")}>
-            <SelectTrigger className="w-40">
-              <SelectValue placeholder="Severity" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All Severities</SelectItem>
-              {severities.map((s) => (
-                <SelectItem key={s} value={s}>{s}</SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+        <div className="mb-8 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
+          <div className="flex flex-col gap-1">
+            <label className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Witness</label>
+            <Select value={witnessFilter} onValueChange={(v) => setWitnessFilter(v ?? "all")}>
+              <SelectTrigger className="w-full sm:w-48">
+                <SelectValue placeholder="Witness" />
+              </SelectTrigger>
+              <SelectContent className="min-w-[200px] max-w-[90vw]">
+                <SelectItem value="all">All Witnesses</SelectItem>
+                {witnesses.map((w) => (
+                  <SelectItem key={w} value={w}>{w}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Type</label>
+            <Select value={typeFilter} onValueChange={(v) => setTypeFilter(v ?? "all")}>
+              <SelectTrigger className="w-full sm:w-48">
+                <SelectValue placeholder="Type" />
+              </SelectTrigger>
+              <SelectContent className="min-w-[200px] max-w-[90vw]">
+                <SelectItem value="all">All Types</SelectItem>
+                {types.map((t) => (
+                  <SelectItem key={t} value={t}>{t}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">Severity</label>
+            <Select value={severityFilter} onValueChange={(v) => setSeverityFilter(v ?? "all")}>
+              <SelectTrigger className="w-full sm:w-48">
+                <SelectValue placeholder="Severity" />
+              </SelectTrigger>
+              <SelectContent className="min-w-[200px] max-w-[90vw]">
+                <SelectItem value="all">All Severities</SelectItem>
+                {severities.map((s) => (
+                  <SelectItem key={s} value={s}>{s}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
         </div>
 
         <p className="mb-6 text-center text-xs text-muted-foreground">

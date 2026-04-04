@@ -10,6 +10,23 @@ import {
 
 const EXHIBIT_BASE = "https://www.acls.org/wp-content/uploads/2026/03/248-"
 
+const EO_LINKS: Record<string, { label: string; url: string }[]> = {
+  "E.O. 14151": [{ label: "E.O. 14151", url: "https://www.whitehouse.gov/presidential-actions/2025/01/ending-radical-and-wasteful-government-dei-programs-and-preferencing/" }],
+  "E.O. 14168": [{ label: "E.O. 14168", url: "https://www.whitehouse.gov/presidential-actions/2025/01/defending-women-from-gender-ideology-extremism-and-restoring-biological-truth-to-the-federal-government/" }],
+  "E.O. 14190": [{ label: "E.O. 14190", url: "https://www.whitehouse.gov/presidential-actions/2025/01/ending-radical-indoctrination-in-k-12-schooling/" }],
+  "E.O. 14217": [{ label: "E.O. 14217", url: "https://www.whitehouse.gov/presidential-actions/2025/03/continuing-the-reduction-of-the-federal-bureaucracy/" }],
+}
+
+function getEoLinksForEvent(action: string): { label: string; url: string }[] {
+  const links: { label: string; url: string }[] = []
+  for (const [eoKey, eoLinks] of Object.entries(EO_LINKS)) {
+    if (action.includes(eoKey)) {
+      links.push(...eoLinks)
+    }
+  }
+  return links
+}
+
 interface TimelineEvent {
   date: string
   actor: string
@@ -76,7 +93,7 @@ export function Timeline() {
             <SelectTrigger className="w-64">
               <SelectValue placeholder="Filter by actor" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="min-w-[var(--radix-select-trigger-width)] max-w-[90vw]">
               <SelectItem value="all">All Actors</SelectItem>
               {actors.map((a) => (
                 <SelectItem key={a} value={a}>
@@ -130,14 +147,27 @@ export function Timeline() {
                         {event.action}
                       </p>
 
-                      <a
-                        href={`${EXHIBIT_BASE}${event.exhibit_source}.pdf`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-2 inline-block text-[10px] font-medium text-muted-foreground/60 transition-colors hover:text-foreground"
-                      >
-                        Exhibit {event.exhibit_source} &rarr;
-                      </a>
+                      <div className="mt-2 flex flex-wrap items-center gap-2">
+                        <a
+                          href={`${EXHIBIT_BASE}${event.exhibit_source}.pdf`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block text-[10px] font-medium text-muted-foreground/60 transition-colors hover:text-foreground"
+                        >
+                          Exhibit {event.exhibit_source} &rarr;
+                        </a>
+                        {getEoLinksForEvent(event.action).map((eo) => (
+                          <a
+                            key={eo.url}
+                            href={eo.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center rounded-full border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 text-[10px] font-medium text-amber-400 transition-colors hover:bg-amber-500/20 hover:text-amber-300"
+                          >
+                            {eo.label} &#8599;
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

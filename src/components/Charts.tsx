@@ -1,16 +1,41 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef, useMemo } from "react"
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
   BarElement,
-  ArcElement,
+  LineElement,
+  PointElement,
+  Filler,
   Tooltip,
   Legend,
 } from "chart.js"
-import { Bar, Doughnut, Pie } from "react-chartjs-2"
+import ChartDataLabels from "chartjs-plugin-datalabels"
+import { Bar, Line } from "react-chartjs-2"
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Tooltip, Legend)
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  LineElement,
+  PointElement,
+  Filler,
+  Tooltip,
+  Legend,
+  ChartDataLabels,
+)
+
+interface Grant {
+  award_id: string
+  program: string
+  remaining_amount: number | null
+  staff_dei_level: string | null
+  chatgpt_dei_flag: string | null
+  fox_dei_flag: string | null
+  keep_or_terminate: string
+  terminated: number
+  equal_protection_category: string | null
+}
 
 interface ProgramRate {
   program: string
@@ -19,47 +44,122 @@ interface ProgramRate {
   pct_terminated: number
 }
 
-interface DeiComparison {
-  staff_level: string | null
-  fox_flag: string | null
-  count: number
+/* ---------- helpers ---------- */
+
+function formatDollars(n: number): string {
+  if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(1)}M`
+  if (n >= 1_000) return `$${(n / 1_000).toFixed(0)}K`
+  return `$${n.toFixed(0)}`
 }
 
-interface EpCategory {
-  category: string
-  count: number
-}
+/* ---------- component ---------- */
 
 export function Charts() {
   const [programRates, setProgramRates] = useState<ProgramRate[]>([])
-  const [deiComparison, setDeiComparison] = useState<DeiComparison[]>([])
-  const [epData, setEpData] = useState<EpCategory[]>([])
-  const [stats, setStats] = useState<{ terminated: number; kept: number; total_grants: number } | null>(null)
+  const [grants, setGrants] = useState<Grant[]>([])
   const sectionRef = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     Promise.all([
       fetch("/program_termination_rates.json").then((r) => r.json()),
-      fetch("/dei_comparison.json").then((r) => r.json()),
-      fetch("/equal_protection.json").then((r) => r.json()),
-      fetch("/stats.json").then((r) => r.json()),
-    ]).then(([pr, dc, ep, st]) => {
+      fetch("/grants_sample.json").then((r) => r.json()),
+    ]).then(([pr, gr]) => {
       setProgramRates(pr)
-      setDeiComparison(dc)
-      setEpData(ep)
-      setStats(st)
+      setGrants(gr)
     }).catch(() => {})
   }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.disconnect() } },
-      { threshold: 0.1 }
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.1 },
     )
     if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
+
+  /* --- Derived data --- */
+
+  // Chart 1: Top 15 programs by terminated grant count
+  const top15Programs = useMemo(() => {
+    return programRates
+      .filter((p) => p.program && p.program !== "None")
+      .sort((a, b) => b.terminated - a.terminated)
+      .slice(0, 15)
+  }, [programRates])
+
+  // Chart 2: Timeline — 2-point mass termination step
+  const timelineData = useMemo(() => {
+    const terminated = grants.filter((g) => g.terminated === 1)
+    const totalTerminated = terminated.length
+    // From court docs: ~1208 org grants on Apr 2, rest (~269 individual) on Apr 3
+    const orgGrants = Math.round(totalTerminated * (1208 / 1477))
+    const individualGrants = totalTerminated - orgGrants
+    return { orgGrants, individualGrants, totalTerminated }
+  }, [grants])
+
+  // Chart 3: DEI Classification Pipeline
+  const pipelineData = useMemo(() => {
+    if (grants.length === 0) return null
+    const total = grants.length
+
+    let staffHigh = 0, staffMedium = 0, staffLow = 0, staffNA = 0, staffNotReviewed = 0
+    let gptYes = 0, gptNo = 0, gptNotScreened = 0
+    let foxYes = 0, foxNo = 0, foxNotReviewed = 0
+
+    for (const g of grants) {
+      // Staff
+      const sl = g.staff_dei_level
+      if (sl === "High") staffHigh++
+      else if (sl === "Medium") staffMedium++
+      else if (sl === "Low") staffLow++
+      else if (sl === "N/A") staffNA++
+      else staffNotReviewed++
+
+      // ChatGPT
+      const cf = g.chatgpt_dei_flag
+      if (cf === "Yes") gptYes++
+      else if (cf === "No") gptNo++
+      else gptNotScreened++
+
+      // Fox
+      const ff = g.fox_dei_flag
+      if (ff === "Yes") foxYes++
+      else if (ff === "No") foxNo++
+      else foxNotReviewed++
+    }
+
+    return {
+      total,
+      staff: { High: staffHigh, Medium: staffMedium, Low: staffLow, "N/A": staffNA, "Not Reviewed": staffNotReviewed },
+      chatgpt: { "Flagged Yes": gptYes, "Flagged No": gptNo, "Not Screened": gptNotScreened },
+      fox: { "DEI Yes": foxYes, "DEI No": foxNo, "Not Reviewed": foxNotReviewed },
+    }
+  }, [grants])
+
+  // Chart 4: Equal protection funds by category
+  const epFundsData = useMemo(() => {
+    const map: Record<string, { amount: number; count: number }> = {}
+    for (const g of grants) {
+      const cat = g.equal_protection_category
+      if (!cat) continue
+      if (!map[cat]) map[cat] = { amount: 0, count: 0 }
+      map[cat].amount += g.remaining_amount ?? 0
+      map[cat].count++
+    }
+    return Object.entries(map)
+      .map(([category, data]) => ({ category, ...data }))
+      .sort((a, b) => b.amount - a.amount)
+  }, [grants])
+
+  const chartTextColor = "rgba(160, 160, 160, 0.9)"
+  const gridColor = "rgba(255,255,255,0.05)"
 
   if (!visible) {
     return (
@@ -76,201 +176,385 @@ export function Charts() {
     )
   }
 
-  // Program termination rates - top 15 + bottom programs
-  const topPrograms = programRates
-    .filter((p) => p.total >= 5)
-    .sort((a, b) => b.pct_terminated - a.pct_terminated)
-    .slice(0, 12)
-
-  const bottomPrograms = programRates
-    .filter((p) => p.pct_terminated < 100 && p.total >= 5)
-    .sort((a, b) => a.pct_terminated - b.pct_terminated)
-    .slice(0, 4)
-
-  const chartPrograms = [...topPrograms, ...bottomPrograms.filter((bp) => !topPrograms.find((tp) => tp.program === bp.program))]
-
-  const truncateLabel = (s: string, max: number) =>
-    s.length > max ? s.slice(0, max) + "..." : s
-
-  const programChartData = {
-    labels: chartPrograms.map((p) => truncateLabel(p.program, 35)),
+  /* ============================================================
+     Chart 1 — Program Impact: top 15 by terminated grant count
+     ============================================================ */
+  const chart1Data = {
+    labels: top15Programs.map((p) => p.program || "(No Program Listed)"),
     datasets: [
       {
-        label: "Termination Rate (%)",
-        data: chartPrograms.map((p) => p.pct_terminated),
-        backgroundColor: chartPrograms.map((p) =>
-          p.pct_terminated === 100
-            ? "rgba(239, 68, 68, 0.7)"
-            : p.pct_terminated === 0
-              ? "rgba(34, 197, 94, 0.7)"
-              : "rgba(234, 179, 8, 0.7)"
-        ),
-        borderColor: chartPrograms.map((p) =>
-          p.pct_terminated === 100
-            ? "rgba(239, 68, 68, 0.9)"
-            : p.pct_terminated === 0
-              ? "rgba(34, 197, 94, 0.9)"
-              : "rgba(234, 179, 8, 0.9)"
-        ),
+        label: "Terminated",
+        data: top15Programs.map((p) => p.terminated),
+        backgroundColor: "rgba(239, 68, 68, 0.7)",
+        borderColor: "rgba(239, 68, 68, 0.9)",
+        borderWidth: 1,
+        borderRadius: 3,
+      },
+      {
+        label: "Kept",
+        data: top15Programs.map((p) => p.total - p.terminated),
+        backgroundColor: "rgba(34, 197, 94, 0.7)",
+        borderColor: "rgba(34, 197, 94, 0.9)",
         borderWidth: 1,
         borderRadius: 3,
       },
     ],
   }
 
-  const chartTextColor = "rgba(160, 160, 160, 0.9)"
-
-  const barOptions = {
+  const chart1Options = {
     indexAxis: "y" as const,
+    responsive: true,
+    maintainAspectRatio: false,
+    layout: {
+      padding: { right: 50 },
+    },
+    plugins: {
+      legend: {
+        position: "top" as const,
+        labels: { color: chartTextColor, font: { size: 11 }, padding: 16 },
+      },
+      tooltip: {
+        callbacks: {
+          afterBody: (ctx: Array<{ dataIndex: number }>) => {
+            const p = top15Programs[ctx[0].dataIndex]
+            return `Total: ${p.total} grants (${p.pct_terminated.toFixed(0)}% terminated)`
+          },
+        },
+      },
+      datalabels: {
+        display: (ctx: any) => {
+          // Only show label on the last (rightmost) stacked segment
+          if (ctx.datasetIndex === 1) {
+            const kept = top15Programs[ctx.dataIndex].total - top15Programs[ctx.dataIndex].terminated
+            return kept > 0
+          }
+          if (ctx.datasetIndex === 0) {
+            const kept = top15Programs[ctx.dataIndex].total - top15Programs[ctx.dataIndex].terminated
+            return kept === 0
+          }
+          return false
+        },
+        anchor: "end" as const,
+        align: "right" as const,
+        color: chartTextColor,
+        font: { size: 10, weight: "bold" as const },
+        formatter: (_value: number, ctx: any) => {
+          return top15Programs[ctx.dataIndex].total
+        },
+      },
+    },
+    scales: {
+      x: {
+        stacked: true,
+        ticks: { color: chartTextColor, font: { size: 10 } },
+        grid: { color: gridColor },
+        title: {
+          display: true,
+          text: "Number of Grants",
+          color: chartTextColor,
+          font: { size: 11 },
+        },
+      },
+      y: {
+        stacked: true,
+        ticks: {
+          color: chartTextColor,
+          font: { size: 10 },
+          autoSkip: false,
+        },
+        grid: { display: false },
+        afterFit: (axis: { width: number }) => {
+          axis.width = 320
+        },
+      },
+    },
+  }
+
+  /* ============================================================
+     Chart 2 — The 22-Day Timeline: cumulative terminations
+     ============================================================ */
+  const { orgGrants, individualGrants, totalTerminated } = timelineData
+
+  const chart2Data = {
+    labels: [
+      "Before Apr 2",
+      "Apr 2, 2025",
+      "Apr 2 (after)",
+      "Apr 3, 2025",
+      "Apr 3 (after)",
+    ],
+    datasets: [
+      {
+        label: "Cumulative Grants Terminated",
+        data: [
+          0,
+          0,
+          orgGrants,
+          orgGrants,
+          orgGrants + individualGrants,
+        ],
+        fill: true,
+        backgroundColor: "rgba(239, 68, 68, 0.15)",
+        borderColor: "rgba(239, 68, 68, 0.8)",
+        borderWidth: 2,
+        pointRadius: [0, 4, 6, 4, 6],
+        pointBackgroundColor: "rgba(239, 68, 68, 0.9)",
+        stepped: "before" as const,
+        tension: 0,
+      },
+    ],
+  }
+
+  const chart2Options = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
       legend: { display: false },
       tooltip: {
         callbacks: {
-          afterLabel: (ctx: { dataIndex: number }) => {
-            const p = chartPrograms[ctx.dataIndex]
-            return `${p.terminated} of ${p.total} grants`
+          label: (ctx: any) => {
+            const val = ctx.parsed.y
+            if (ctx.dataIndex === 2) return `${val.toLocaleString()} organizational grants terminated`
+            if (ctx.dataIndex === 4) return `${val.toLocaleString()} total grants terminated`
+            return `${val.toLocaleString()} grants`
           },
+        },
+      },
+      datalabels: {
+        display: (ctx: any) => ctx.dataIndex === 2 || ctx.dataIndex === 4,
+        anchor: "end" as const,
+        align: "top" as const,
+        color: chartTextColor,
+        font: { size: 11, weight: "bold" as const },
+        formatter: (value: number, ctx: any) => {
+          if (ctx.dataIndex === 2) return `${value.toLocaleString()} org grants`
+          if (ctx.dataIndex === 4) return `${value.toLocaleString()} total`
+          return value.toLocaleString()
         },
       },
     },
     scales: {
       x: {
-        max: 100,
-        ticks: { color: chartTextColor, font: { size: 10 } },
-        grid: { color: "rgba(255,255,255,0.05)" },
+        ticks: { color: chartTextColor, font: { size: 11 } },
+        grid: { color: gridColor },
       },
       y: {
-        ticks: { color: chartTextColor, font: { size: 10 } },
-        grid: { display: false },
+        beginAtZero: true,
+        ticks: { color: chartTextColor, font: { size: 11 } },
+        grid: { color: gridColor },
+        title: {
+          display: true,
+          text: "Cumulative Grants Terminated",
+          color: chartTextColor,
+          font: { size: 11 },
+        },
       },
     },
   }
 
-  // Keep vs Terminate donut
-  const kept = stats?.kept ?? 27
-  const terminated = stats?.terminated ?? 1477
-  const other = (stats?.total_grants ?? 2415) - kept - terminated
-
-  const donutData = {
-    labels: ["Terminated", "Kept", "Other / Not Reviewed"],
-    datasets: [
-      {
-        data: [terminated, kept, other],
-        backgroundColor: [
-          "rgba(239, 68, 68, 0.7)",
-          "rgba(34, 197, 94, 0.7)",
-          "rgba(100, 100, 100, 0.4)",
-        ],
-        borderColor: [
-          "rgba(239, 68, 68, 0.9)",
-          "rgba(34, 197, 94, 0.9)",
-          "rgba(100, 100, 100, 0.6)",
-        ],
-        borderWidth: 1,
-      },
-    ],
+  /* ============================================================
+     Chart 3 — DEI Classification Pipeline (horizontal stacked)
+     ============================================================ */
+  const pipeline = pipelineData
+  const pipelineColors = {
+    "High": "rgba(239, 68, 68, 0.75)",
+    "Medium": "rgba(234, 179, 8, 0.7)",
+    "Low": "rgba(59, 130, 246, 0.7)",
+    "N/A": "rgba(100, 100, 100, 0.5)",
+    "Not Reviewed": "rgba(55, 55, 55, 0.5)",
+    "Flagged Yes": "rgba(239, 68, 68, 0.75)",
+    "Flagged No": "rgba(34, 197, 94, 0.7)",
+    "Not Screened": "rgba(55, 55, 55, 0.5)",
+    "DEI Yes": "rgba(239, 68, 68, 0.75)",
+    "DEI No": "rgba(34, 197, 94, 0.7)",
   }
 
-  const donutOptions = {
+  const pipelineBorders: Record<string, string> = {
+    "High": "rgba(239, 68, 68, 0.9)",
+    "Medium": "rgba(234, 179, 8, 0.9)",
+    "Low": "rgba(59, 130, 246, 0.9)",
+    "N/A": "rgba(100, 100, 100, 0.7)",
+    "Not Reviewed": "rgba(55, 55, 55, 0.7)",
+    "Flagged Yes": "rgba(239, 68, 68, 0.9)",
+    "Flagged No": "rgba(34, 197, 94, 0.9)",
+    "Not Screened": "rgba(55, 55, 55, 0.7)",
+    "DEI Yes": "rgba(239, 68, 68, 0.9)",
+    "DEI No": "rgba(34, 197, 94, 0.9)",
+  }
+
+  // Build datasets for all unique segment keys across all 3 rows
+  const allSegments = [
+    "High", "Medium", "Low", "N/A", "Not Reviewed",
+    "Flagged Yes", "Flagged No", "Not Screened",
+    "DEI Yes", "DEI No",
+  ]
+
+  const chart3Labels = ["NEH Staff Review", "ChatGPT Screening", "Fox Final Decision"]
+
+  const chart3Datasets = pipeline
+    ? allSegments.map((seg) => ({
+        label: seg,
+        data: [
+          pipeline.staff[seg as keyof typeof pipeline.staff] ?? 0,
+          pipeline.chatgpt[seg as keyof typeof pipeline.chatgpt] ?? 0,
+          pipeline.fox[seg as keyof typeof pipeline.fox] ?? 0,
+        ],
+        backgroundColor: pipelineColors[seg as keyof typeof pipelineColors] ?? "rgba(100,100,100,0.3)",
+        borderColor: pipelineBorders[seg] ?? "rgba(100,100,100,0.5)",
+        borderWidth: 1,
+        borderRadius: 2,
+      }))
+    : []
+
+  const chart3Data = {
+    labels: chart3Labels,
+    datasets: chart3Datasets,
+  }
+
+  const chart3Options = {
+    indexAxis: "y" as const,
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
       legend: {
         position: "bottom" as const,
-        labels: { color: chartTextColor, font: { size: 11 }, padding: 16 },
+        labels: {
+          color: chartTextColor,
+          font: { size: 10 },
+          padding: 10,
+          filter: (item: { text: string; datasetIndex: number }) => {
+            // Only show legend items that have non-zero values
+            const ds = chart3Datasets[item.datasetIndex]
+            return ds ? ds.data.some((v: number) => v > 0) : false
+          },
+        },
       },
-    },
-  }
-
-  // DEI comparison stacked bar
-  const staffLevels = ["High", "Medium", "Low", "N/A"]
-  const deiStackedData = {
-    labels: staffLevels,
-    datasets: [
-      {
-        label: "Fox: Yes",
-        data: staffLevels.map((sl) => {
-          const match = deiComparison.find((d) => d.staff_level === sl && d.fox_flag === "Yes")
-          return match?.count ?? 0
-        }),
-        backgroundColor: "rgba(239, 68, 68, 0.6)",
-        borderColor: "rgba(239, 68, 68, 0.8)",
-        borderWidth: 1,
-        borderRadius: 3,
+      tooltip: {
+        callbacks: {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          label: (ctx: any) => {
+            const total = pipeline?.total ?? 1
+            const val = ctx.parsed?.x ?? 0
+            const pct = ((val / total) * 100).toFixed(1)
+            return `${ctx.dataset?.label ?? ""}: ${val.toLocaleString()} (${pct}%)`
+          },
+        },
       },
-      {
-        label: "Fox: No / Null",
-        data: staffLevels.map((sl) => {
-          const match = deiComparison.find((d) => d.staff_level === sl && !d.fox_flag)
-          return match?.count ?? 0
-        }),
-        backgroundColor: "rgba(100, 100, 100, 0.4)",
-        borderColor: "rgba(100, 100, 100, 0.6)",
-        borderWidth: 1,
-        borderRadius: 3,
-      },
-    ],
-  }
-
-  const stackedOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: "bottom" as const,
-        labels: { color: chartTextColor, font: { size: 11 }, padding: 16 },
+      datalabels: {
+        display: (ctx: any) => {
+          return ctx.dataset.data[ctx.dataIndex] > 50
+        },
+        color: "#fff",
+        font: { size: 9, weight: "bold" as const },
+        formatter: (value: number) => value > 0 ? value.toLocaleString() : "",
       },
     },
     scales: {
       x: {
         stacked: true,
-        ticks: { color: chartTextColor, font: { size: 11 } },
-        grid: { color: "rgba(255,255,255,0.05)" },
+        ticks: { color: chartTextColor, font: { size: 10 } },
+        grid: { color: gridColor },
+        title: {
+          display: true,
+          text: "Number of Grants",
+          color: chartTextColor,
+          font: { size: 11 },
+        },
       },
       y: {
         stacked: true,
         ticks: { color: chartTextColor, font: { size: 11 } },
-        grid: { color: "rgba(255,255,255,0.05)" },
+        grid: { display: false },
+        afterFit: (axis: { width: number }) => {
+          axis.width = 160
+        },
       },
     },
   }
 
-  // Equal protection pie
-  const epPieData = {
-    labels: epData.map((e) => e.category),
+  /* ============================================================
+     Chart 4 — Equal Protection: Funds Lost by Category
+     ============================================================ */
+  const epColors = [
+    "rgba(239, 68, 68, 0.7)",
+    "rgba(59, 130, 246, 0.7)",
+    "rgba(234, 179, 8, 0.7)",
+    "rgba(168, 85, 247, 0.7)",
+    "rgba(236, 72, 153, 0.7)",
+    "rgba(34, 197, 94, 0.7)",
+  ]
+  const epBorders = [
+    "rgba(239, 68, 68, 0.9)",
+    "rgba(59, 130, 246, 0.9)",
+    "rgba(234, 179, 8, 0.9)",
+    "rgba(168, 85, 247, 0.9)",
+    "rgba(236, 72, 153, 0.9)",
+    "rgba(34, 197, 94, 0.9)",
+  ]
+
+  const chart4Data = {
+    labels: epFundsData.map((e) => e.category),
     datasets: [
       {
-        data: epData.map((e) => e.count),
-        backgroundColor: [
-          "rgba(239, 68, 68, 0.7)",
-          "rgba(59, 130, 246, 0.7)",
-          "rgba(234, 179, 8, 0.7)",
-          "rgba(168, 85, 247, 0.7)",
-          "rgba(34, 197, 94, 0.7)",
-          "rgba(236, 72, 153, 0.7)",
-        ],
-        borderColor: [
-          "rgba(239, 68, 68, 0.9)",
-          "rgba(59, 130, 246, 0.9)",
-          "rgba(234, 179, 8, 0.9)",
-          "rgba(168, 85, 247, 0.9)",
-          "rgba(34, 197, 94, 0.9)",
-          "rgba(236, 72, 153, 0.9)",
-        ],
+        label: "Remaining Amount ($)",
+        data: epFundsData.map((e) => e.amount),
+        backgroundColor: epFundsData.map((_, i) => epColors[i % epColors.length]),
+        borderColor: epFundsData.map((_, i) => epBorders[i % epBorders.length]),
         borderWidth: 1,
+        borderRadius: 3,
       },
     ],
   }
 
-  const pieOptions = {
+  const chart4Options = {
+    indexAxis: "y" as const,
     responsive: true,
     maintainAspectRatio: false,
+    layout: {
+      padding: { right: 20 },
+    },
     plugins: {
-      legend: {
-        position: "bottom" as const,
-        labels: { color: chartTextColor, font: { size: 11 }, padding: 12 },
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: (ctx: any) => {
+            const item = epFundsData[ctx.dataIndex]
+            return [
+              `Funds at risk: ${formatDollars(ctx.parsed.x)}`,
+              `Grants: ${item.count}`,
+            ]
+          },
+        },
+      },
+      datalabels: {
+        anchor: "end" as const,
+        align: "right" as const,
+        color: chartTextColor,
+        font: { size: 10, weight: "bold" as const },
+        formatter: (value: number) => formatDollars(value),
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: chartTextColor,
+          font: { size: 10 },
+          callback: (value: string | number) => formatDollars(Number(value)),
+        },
+        grid: { color: gridColor },
+        title: {
+          display: true,
+          text: "Funds at Risk (Remaining Amount)",
+          color: chartTextColor,
+          font: { size: 11 },
+        },
+      },
+      y: {
+        ticks: { color: chartTextColor, font: { size: 11 }, autoSkip: false },
+        grid: { display: false },
+        afterFit: (axis: { width: number }) => {
+          axis.width = 200
+        },
       },
     },
   }
@@ -286,53 +570,60 @@ export function Charts() {
           Data at a Glance
         </h3>
 
-        <div className="grid gap-6 lg:grid-cols-2">
-          {/* Program termination rates */}
-          <div className="glass-card rounded-xl p-6 lg:col-span-2">
-            <h4 className="mb-4 text-sm font-semibold">
-              Program Termination Rates
+        <div className="grid gap-6">
+          {/* Chart 1: Program Impact */}
+          <div className="glass-card rounded-xl p-6">
+            <h4 className="mb-1 text-sm font-semibold">
+              Program Impact: Top 15 by Grants Terminated
             </h4>
             <p className="mb-4 text-xs text-muted-foreground">
-              Programs with 5+ grants. Red indicates 100% termination.
+              Showing the 15 programs with the most terminated grants. Total count shown at end of each bar.
             </p>
-            <div style={{ height: Math.max(chartPrograms.length * 28, 300) }}>
-              <Bar data={programChartData} options={barOptions} />
+            <div style={{ height: Math.max(top15Programs.length * 36, 400) }}>
+              <Bar data={chart1Data} options={chart1Options} />
             </div>
           </div>
 
-          {/* Keep vs Terminate */}
-          <div className="glass-card rounded-xl p-6">
-            <h4 className="mb-4 text-sm font-semibold">
-              Keep vs. Terminate
-            </h4>
-            <div style={{ height: 280 }}>
-              <Doughnut data={donutData} options={donutOptions} />
+          {/* Row of 2 smaller charts */}
+          <div className="grid gap-6 lg:grid-cols-2">
+            {/* Chart 2: The 22-Day Timeline */}
+            <div className="glass-card rounded-xl p-6">
+              <h4 className="mb-1 text-sm font-semibold">
+                The 22-Day Timeline
+              </h4>
+              <p className="mb-4 text-xs text-muted-foreground">
+                Mass termination events: {totalTerminated.toLocaleString()} grants terminated across two days in April 2025.
+              </p>
+              <div style={{ height: 280 }}>
+                <Line data={chart2Data} options={chart2Options} />
+              </div>
+            </div>
+
+            {/* Chart 4: Equal Protection — Funds Lost */}
+            <div className="glass-card rounded-xl p-6">
+              <h4 className="mb-1 text-sm font-semibold">
+                Equal Protection — Funds at Risk by Category
+              </h4>
+              <p className="mb-4 text-xs text-muted-foreground">
+                Total remaining grant dollars for grants with equal protection claims. Hover for grant count.
+              </p>
+              <div style={{ height: 280 }}>
+                <Bar data={chart4Data} options={chart4Options} />
+              </div>
             </div>
           </div>
 
-          {/* DEI Stacked */}
+          {/* Chart 3: DEI Classification Pipeline */}
           <div className="glass-card rounded-xl p-6">
-            <h4 className="mb-4 text-sm font-semibold">
-              Staff Assessment vs. Fox Override
+            <h4 className="mb-1 text-sm font-semibold">
+              DEI Classification Pipeline
             </h4>
             <p className="mb-4 text-xs text-muted-foreground">
-              By staff DEI level, showing Fox flag distribution
+              How grants flowed through three screening stages. Staff reviewed only {pipeline ? (pipeline.total - pipeline.staff["Not Reviewed"]).toLocaleString() : "—"} of {pipeline?.total.toLocaleString()} grants,
+              ChatGPT flagged {pipeline?.chatgpt["Flagged Yes"].toLocaleString()}, and Fox flagged {pipeline?.fox["DEI Yes"].toLocaleString()} as DEI.
             </p>
-            <div style={{ height: 250 }}>
-              <Bar data={deiStackedData} options={stackedOptions} />
-            </div>
-          </div>
-
-          {/* Equal Protection Pie */}
-          <div className="glass-card rounded-xl p-6 lg:col-span-2 lg:mx-auto lg:max-w-lg">
-            <h4 className="mb-4 text-sm font-semibold text-center">
-              Equal Protection Categories
-            </h4>
-            <p className="mb-4 text-xs text-muted-foreground text-center">
-              Protected class categories among grants with equal protection claims
-            </p>
-            <div style={{ height: 300 }}>
-              <Pie data={epPieData} options={pieOptions} />
+            <div style={{ height: 220 }}>
+              <Bar data={chart3Data} options={chart3Options} />
             </div>
           </div>
         </div>
