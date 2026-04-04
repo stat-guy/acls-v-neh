@@ -1,0 +1,17 @@
+{
+  "total_grants": 2415,
+  "terminated": 1477,
+  "kept": 27,
+  "fox_dei_flagged": 538,
+  "chatgpt_dei_flagged": 259,
+  "staff_dei_flagged": 101,
+  "dei_overrides": 491,
+  "equal_protection_claims": 74,
+  "total_inconsistencies": 52,
+  "contradictions": 0,
+  "minimizations": 0,
+  "omissions": 0,
+  "total_remaining_funds": 149385243.24,
+  "total_emails": 35,
+  "total_deposition_claims": 158
+}

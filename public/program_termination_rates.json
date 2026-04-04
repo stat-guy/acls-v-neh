@@ -1,0 +1,416 @@
+[
+  {
+    "program": "Trans-Atlantic Platform (Research Programs)",
+    "total": 1,
+    "terminated": 1,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Sustaining Cultural Heritage Collections",
+    "total": 28,
+    "terminated": 28,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Supplements to State Humanities Councils General Operating Support Grants",
+    "total": 22,
+    "terminated": 22,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "State Projects",
+    "total": 8,
+    "terminated": 8,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "State Humanities Councils General Operating Support Grants",
+    "total": 78,
+    "terminated": 78,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Spotlight on Humanities in Higher Education: Exploration Grants",
+    "total": 6,
+    "terminated": 6,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Spotlight on Humanities in Higher Education: Development Grants",
+    "total": 35,
+    "terminated": 35,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Short Documentaries",
+    "total": 1,
+    "terminated": 1,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Research and Development",
+    "total": 20,
+    "terminated": 20,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Public Impact Projects at Smaller Organizations",
+    "total": 37,
+    "terminated": 37,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Preservation and Access Education and Training",
+    "total": 28,
+    "terminated": 28,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Preservation Assistance Grants",
+    "total": 52,
+    "terminated": 52,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "National Digital Newspaper Program",
+    "total": 23,
+    "terminated": 23,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "NEH/AHRC New Directions for Digital Scholarship in Cultural Institutions",
+    "total": 3,
+    "terminated": 3,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Media Projects Production",
+    "total": 33,
+    "terminated": 33,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Media Projects Development",
+    "total": 9,
+    "terminated": 9,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Landmarks of American History and Culture for K-12 Educators",
+    "total": 15,
+    "terminated": 15,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Landmarks of American History and Culture for Higher Education Faculty",
+    "total": 3,
+    "terminated": 3,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Institutes for K-12 Educators",
+    "total": 19,
+    "terminated": 19,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Institutes for Higher Education Faculty",
+    "total": 13,
+    "terminated": 13,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Institutes for Advanced Topics in the Digital Humanities",
+    "total": 11,
+    "terminated": 11,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Infrastructure and Capacity Building Challenge Grants",
+    "total": 87,
+    "terminated": 87,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Research Centers on Artificial Intelligence",
+    "total": 4,
+    "terminated": 4,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Initiatives at Tribal Colleges and Universities",
+    "total": 2,
+    "terminated": 2,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Initiatives at Historically Black Colleges and Universities",
+    "total": 7,
+    "terminated": 7,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Initiatives at Hispanic-Serving Institutions",
+    "total": 28,
+    "terminated": 28,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Initiatives at Community Colleges",
+    "total": 10,
+    "terminated": 10,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Initiatives at Colleges and Universities",
+    "total": 40,
+    "terminated": 40,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Indicators",
+    "total": 10,
+    "terminated": 10,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Discussions",
+    "total": 7,
+    "terminated": 7,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Connections Planning Grants",
+    "total": 11,
+    "terminated": 11,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Connections Implementation Grants",
+    "total": 26,
+    "terminated": 26,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Humanities Collections and Reference Resources",
+    "total": 100,
+    "terminated": 100,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Historic Places: Planning",
+    "total": 2,
+    "terminated": 2,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Historic Places: Implementation",
+    "total": 1,
+    "terminated": 1,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Graduate Education in the Humanities: A National Convening",
+    "total": 1,
+    "terminated": 1,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Fellowships Open Book Program",
+    "total": 18,
+    "terminated": 18,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Exhibitions: Planning",
+    "total": 7,
+    "terminated": 7,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Exhibitions: Implementation",
+    "total": 21,
+    "terminated": 21,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Documenting Endangered Languages - Preservation",
+    "total": 12,
+    "terminated": 12,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Digital Projects for the Public: Prototyping Grants",
+    "total": 6,
+    "terminated": 6,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Digital Projects for the Public: Production Grants",
+    "total": 12,
+    "terminated": 12,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Digital Projects for the Public: Discovery Grants",
+    "total": 4,
+    "terminated": 4,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Digital Humanities Advancement Grants",
+    "total": 72,
+    "terminated": 72,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Dialogues on the Experience of War",
+    "total": 7,
+    "terminated": 7,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Dangers and Opportunities of Technology: Perspectives from the Humanities (Individuals)",
+    "total": 16,
+    "terminated": 16,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Dangers and Opportunities of Technology: Perspectives from the Humanities (Collaborative)",
+    "total": 13,
+    "terminated": 13,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Cultural and Community Resilience",
+    "total": 39,
+    "terminated": 39,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Cooperative Agreements and Special Projects (Public Programs)",
+    "total": 12,
+    "terminated": 12,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Cooperative Agreements and Special Projects (P&A)",
+    "total": 5,
+    "terminated": 5,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Cooperative Agreements and Special Projects (Education)",
+    "total": 3,
+    "terminated": 3,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Cooperative Agreements and Special Projects (Digital Humanities)",
+    "total": 2,
+    "terminated": 2,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Cooperative Agreements and Special Projects (Data and Evaluation)",
+    "total": 2,
+    "terminated": 2,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Climate Smart Humanities Organizations",
+    "total": 9,
+    "terminated": 9,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Chair's Disaster Recovery Grants for Humanities Collections",
+    "total": 5,
+    "terminated": 5,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "ARP-Organizations (Preservation-related)",
+    "total": 1,
+    "terminated": 1,
+    "pct_terminated": 100.0
+  },
+  {
+    "program": "Fellowship Programs at Independent Research Institutions",
+    "total": 46,
+    "terminated": 32,
+    "pct_terminated": 69.6
+  },
+  {
+    "program": "Awards for Faculty Institutional Support \u2013 HBCUs and TCUs",
+    "total": 3,
+    "terminated": 2,
+    "pct_terminated": 66.7
+  },
+  {
+    "program": "Archaeological and Ethnographic Field Research",
+    "total": 27,
+    "terminated": 18,
+    "pct_terminated": 66.7
+  },
+  {
+    "program": "Collaborative Research",
+    "total": 68,
+    "terminated": 41,
+    "pct_terminated": 60.3
+  },
+  {
+    "program": "Scholarly Editions and Translations",
+    "total": 79,
+    "terminated": 30,
+    "pct_terminated": 38.0
+  },
+  {
+    "program": "Cooperative Agreements and Special Projects (Research)",
+    "total": 18,
+    "terminated": 6,
+    "pct_terminated": 33.3
+  },
+  {
+    "program": "Summer Stipends",
+    "total": 439,
+    "terminated": 0,
+    "pct_terminated": 0.0
+  },
+  {
+    "program": "Public Scholars",
+    "total": 94,
+    "terminated": 0,
+    "pct_terminated": 0.0
+  },
+  {
+    "program": "Kluge Fellowships",
+    "total": 12,
+    "terminated": 0,
+    "pct_terminated": 0.0
+  },
+  {
+    "program": "Fellowships for Advanced Social Science Research on Japan",
+    "total": 8,
+    "terminated": 0,
+    "pct_terminated": 0.0
+  },
+  {
+    "program": "Fellowships",
+    "total": 185,
+    "terminated": 0,
+    "pct_terminated": 0.0
+  },
+  {
+    "program": "Dynamic Language Infrastructure-Documenting Endangered Languages - Fellowships",
+    "total": 19,
+    "terminated": 0,
+    "pct_terminated": 0.0
+  },
+  {
+    "program": "Awards for Faculty",
+    "total": 69,
+    "terminated": 0,
+    "pct_terminated": 0.0
+  }
+]

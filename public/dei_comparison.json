@@ -1,0 +1,57 @@
+[
+  {
+    "staff_level": null,
+    "fox_flag": null,
+    "count": 1802
+  },
+  {
+    "staff_level": null,
+    "fox_flag": "Yes",
+    "count": 481
+  },
+  {
+    "staff_level": "Low",
+    "fox_flag": null,
+    "count": 28
+  },
+  {
+    "staff_level": "Low",
+    "fox_flag": "Yes",
+    "count": 24
+  },
+  {
+    "staff_level": "N/A",
+    "fox_flag": null,
+    "count": 20
+  },
+  {
+    "staff_level": "Medium",
+    "fox_flag": null,
+    "count": 19
+  },
+  {
+    "staff_level": "Medium",
+    "fox_flag": "Yes",
+    "count": 16
+  },
+  {
+    "staff_level": "N/A",
+    "fox_flag": "Yes",
+    "count": 10
+  },
+  {
+    "staff_level": "High",
+    "fox_flag": null,
+    "count": 7
+  },
+  {
+    "staff_level": "High",
+    "fox_flag": "Yes",
+    "count": 7
+  },
+  {
+    "staff_level": null,
+    "fox_flag": "No",
+    "count": 1
+  }
+]

@@ -1,0 +1,317 @@
+[
+  {
+    "exhibit_number": 4,
+    "date": "2025-02-07T17:38:37",
+    "sender": "Bobley, Brett",
+    "recipients": "!Division Directors",
+    "subject": "NEH EO Award Review Spreadsheet",
+    "key_actions": "Bobley distributes review criteria based on OMB memo M-25-13 (Jan 27, 2025); Instructs division directors to review all awards from 2021-present; Criteria: identify grants promoting (i) environmental justice, (ii) DEI/DEIA, (iii) gender ideology; Shared NEH-Awards-2025 Data Call.xlsx spreadsheet for collaborative review; Column Q: 'Proposal Needs Further Discussion' (Yes/No for every award); Columns R, S, T map to three DEI criteria; Priority order: November 2024 council awards first, then March council, then remaining",
+    "linked_spreadsheet_exhibits": "06,07"
+  },
+  {
+    "exhibit_number": 27,
+    "date": "2025-03-12T15:11:42",
+    "sender": "Nate Cavanaugh",
+    "recipients": "McDonald, Michael",
+    "subject": "NEH | Biden Grants",
+    "key_actions": "CRITICAL: Cavanaugh sends McDonald complete list of Biden-era NEH grants; 1,295 grants totaling $376M obligated, $54M spent, $322M remaining ('can presumably be clawed back'); Grants scoped to Biden administration dates (Jan 20, 2021 - Jan 19, 2025); Separately flagged ~$25M in grants from prior meeting; Column E ('award_base_action_date') used for reference; This is the BASELINE list that DOGE used to identify grants for termination",
+    "linked_spreadsheet_exhibits": "28"
+  },
+  {
+    "exhibit_number": 8,
+    "date": "2025-03-13T15:16:00",
+    "sender": "Wolfson, Adam (awolfson@neh.gov)",
+    "recipients": "nate.cavanaugh@gsa.gov, justin.fox@gsa.gov",
+    "subject": "historical review of grants",
+    "key_actions": "Wolfson shares Brett's award spreadsheet link with DOGE team (Cavanaugh, Fox); First documented contact between NEH leadership and DOGE regarding grants; Explains review methodology: directors reviewed grants by program office; Rated grants as high/medium/low/N/A for DEI/DEIA, gender ideology, environmental justice; Some directors still need to finish agency-wide tab (ARP/Chair's awards); McDonald and Wolfson planning to finalize list for OMB on Monday (March 17)",
+    "linked_spreadsheet_exhibits": "04,06,07"
+  },
+  {
+    "exhibit_number": 30,
+    "date": "2025-03-17T01:40:44",
+    "sender": "Fox, Justin (jfox@neh.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "NEH Review",
+    "key_actions": "CRITICAL COMPREHENSIVE REVIEW: Fox sends DOGE's full review of NEH grants, employees, and contracts; Grants: DOGE independently reviewed all active grants for DEI and marked them; Employees: DOGE proposed RIF based on (i) remote status, (ii) function redundancy, (iii) DEI grant involvement; DOGE proposes reducing Federal/State partnerships from 43% to statutory minimum 20%; Contracts: Flagged for descoping or termination; Fox requests McDonald mark 'MM / AW' column for grant decisions; Sent at 1:40 AM -- overnight email from Fox; Fox again using NEH email (jfox@neh.gov)",
+    "linked_spreadsheet_exhibits": "31"
+  },
+  {
+    "exhibit_number": 13,
+    "date": "2025-03-19T18:05:50",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov), Nate Cavanaugh (nate.cavanaugh@gsa.gov), Fox, Justin (jfox@neh.gov)",
+    "subject": "NEH Grants",
+    "key_actions": "DOGE independently reviewed grants NEH staff marked as N/A for DEI; DOGE flagged some N/A grants as having DEI involvement -- overriding NEH staff judgment; Clarifies McDonald/Wolfson have NOT yet reviewed these DOGE-flagged grants; Plans to consolidate to single list using Brett's excel after McDonald's input; References upcoming Board meeting the next day (March 20)",
+    "linked_spreadsheet_exhibits": "04,14"
+  },
+  {
+    "exhibit_number": 15,
+    "date": "2025-03-28T11:57:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "TO REVIEW: Active Grants",
+    "key_actions": "Fox sends ~440 active grants marked N/A by staff for McDonald review; Fox attaches proposed RIF (reduction in force) plan; Fox requests admin access to Microsoft systems at NEH; McDonald questions the Microsoft access request (Sunday response); Fox escalates urgently on Monday with three rapid emails; CRITICAL THREAT: Fox tells McDonald 'we'd prefer that you remain on our side but let us know if you're no longer interested'; Fox demands 'game plan for effectuating RIFs, final grant terminations and contract cancellations by tomorrow AM'; States 'getting pressure from the top'",
+    "linked_spreadsheet_exhibits": "04,09"
+  },
+  {
+    "exhibit_number": 16,
+    "date": "2025-03-28T11:57:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "TO REVIEW: Active Grants",
+    "key_actions": "Duplicate/alternate production of same email chain as Exhibit 15; Different Bates range (NEH_AR vs US production); Same substantive content including threat to McDonald",
+    "linked_spreadsheet_exhibits": null
+  },
+  {
+    "exhibit_number": 17,
+    "date": "2025-03-28T11:57:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "TO REVIEW: Active Grants",
+    "key_actions": "McDonald recaps two spreadsheet tracks: (1) Brett's list reviewed by McDonald/Wolfson sent to OMB, (2) N/A list prepared by DOGE; McDonald confirms he excluded only grants not conflicting with admin priorities (e.g., Papers of George Washington); McDonald states 'As you instructed, we have only excluded the ones that seem not to conflict with the Administration's priorities'; McDonald confirms understanding that DOGE will execute the cancellations; Working on RIF plans; DOGE to visit Wednesday to discuss; CRITICAL: McDonald acknowledges DOGE is the entity cancelling grants ('we understand that you will cancel this list')",
+    "linked_spreadsheet_exhibits": "04,06,09"
+  },
+  {
+    "exhibit_number": 15,
+    "date": "2025-03-30T16:06:00",
+    "sender": "McDonald, Michael (mmcdonald@neh.gov)",
+    "recipients": "Justin Fox (justin.fox@gsa.gov)",
+    "subject": "Re: TO REVIEW Active Grants",
+    "key_actions": "Fox sends ~440 active grants marked N/A by staff for McDonald review; Fox attaches proposed RIF (reduction in force) plan; Fox requests admin access to Microsoft systems at NEH; McDonald questions the Microsoft access request (Sunday response); Fox escalates urgently on Monday with three rapid emails; CRITICAL THREAT: Fox tells McDonald 'we'd prefer that you remain on our side but let us know if you're no longer interested'; Fox demands 'game plan for effectuating RIFs, final grant terminations and contract cancellations by tomorrow AM'; States 'getting pressure from the top'",
+    "linked_spreadsheet_exhibits": "04,09"
+  },
+  {
+    "exhibit_number": 16,
+    "date": "2025-03-30T16:06:00",
+    "sender": "McDonald, Michael (mmcdonald@neh.gov)",
+    "recipients": "Justin Fox (justin.fox@gsa.gov)",
+    "subject": "Re: TO REVIEW: Active Grants",
+    "key_actions": "Duplicate/alternate production of same email chain as Exhibit 15; Different Bates range (NEH_AR vs US production); Same substantive content including threat to McDonald",
+    "linked_spreadsheet_exhibits": null
+  },
+  {
+    "exhibit_number": 15,
+    "date": "2025-03-31T11:35:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov)",
+    "subject": "Re: TO REVIEW Active Grants",
+    "key_actions": "Fox sends ~440 active grants marked N/A by staff for McDonald review; Fox attaches proposed RIF (reduction in force) plan; Fox requests admin access to Microsoft systems at NEH; McDonald questions the Microsoft access request (Sunday response); Fox escalates urgently on Monday with three rapid emails; CRITICAL THREAT: Fox tells McDonald 'we'd prefer that you remain on our side but let us know if you're no longer interested'; Fox demands 'game plan for effectuating RIFs, final grant terminations and contract cancellations by tomorrow AM'; States 'getting pressure from the top'",
+    "linked_spreadsheet_exhibits": "04,09"
+  },
+  {
+    "exhibit_number": 16,
+    "date": "2025-03-31T11:35:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Nate Cavanaugh",
+    "subject": "Re: TO REVIEW: Active Grants",
+    "key_actions": "Duplicate/alternate production of same email chain as Exhibit 15; Different Bates range (NEH_AR vs US production); Same substantive content including threat to McDonald",
+    "linked_spreadsheet_exhibits": null
+  },
+  {
+    "exhibit_number": 15,
+    "date": "2025-03-31T12:29:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov)",
+    "subject": "Re: TO REVIEW Active Grants",
+    "key_actions": "Fox sends ~440 active grants marked N/A by staff for McDonald review; Fox attaches proposed RIF (reduction in force) plan; Fox requests admin access to Microsoft systems at NEH; McDonald questions the Microsoft access request (Sunday response); Fox escalates urgently on Monday with three rapid emails; CRITICAL THREAT: Fox tells McDonald 'we'd prefer that you remain on our side but let us know if you're no longer interested'; Fox demands 'game plan for effectuating RIFs, final grant terminations and contract cancellations by tomorrow AM'; States 'getting pressure from the top'",
+    "linked_spreadsheet_exhibits": "04,09"
+  },
+  {
+    "exhibit_number": 16,
+    "date": "2025-03-31T12:29:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Nate Cavanaugh",
+    "subject": "Re: TO REVIEW: Active Grants",
+    "key_actions": "Duplicate/alternate production of same email chain as Exhibit 15; Different Bates range (NEH_AR vs US production); Same substantive content including threat to McDonald",
+    "linked_spreadsheet_exhibits": null
+  },
+  {
+    "exhibit_number": 15,
+    "date": "2025-03-31T12:52:37",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Nate Cavanaugh (nate.cavanaugh@gsa.gov)",
+    "subject": "Re: TO REVIEW Active Grants",
+    "key_actions": "Fox sends ~440 active grants marked N/A by staff for McDonald review; Fox attaches proposed RIF (reduction in force) plan; Fox requests admin access to Microsoft systems at NEH; McDonald questions the Microsoft access request (Sunday response); Fox escalates urgently on Monday with three rapid emails; CRITICAL THREAT: Fox tells McDonald 'we'd prefer that you remain on our side but let us know if you're no longer interested'; Fox demands 'game plan for effectuating RIFs, final grant terminations and contract cancellations by tomorrow AM'; States 'getting pressure from the top'",
+    "linked_spreadsheet_exhibits": "04,09"
+  },
+  {
+    "exhibit_number": 16,
+    "date": "2025-03-31T12:52:55",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Nate Cavanaugh",
+    "subject": "Re: TO REVIEW: Active Grants",
+    "key_actions": "Duplicate/alternate production of same email chain as Exhibit 15; Different Bates range (NEH_AR vs US production); Same substantive content including threat to McDonald",
+    "linked_spreadsheet_exhibits": null
+  },
+  {
+    "exhibit_number": 17,
+    "date": "2025-03-31T16:28:00",
+    "sender": "McDonald, Michael (mmcdonald@neh.gov)",
+    "recipients": "Justin Fox (justin.fox@gsa.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "RE: TO REVIEW: Active Grants",
+    "key_actions": "McDonald recaps two spreadsheet tracks: (1) Brett's list reviewed by McDonald/Wolfson sent to OMB, (2) N/A list prepared by DOGE; McDonald confirms he excluded only grants not conflicting with admin priorities (e.g., Papers of George Washington); McDonald states 'As you instructed, we have only excluded the ones that seem not to conflict with the Administration's priorities'; McDonald confirms understanding that DOGE will execute the cancellations; Working on RIF plans; DOGE to visit Wednesday to discuss; CRITICAL: McDonald acknowledges DOGE is the entity cancelling grants ('we understand that you will cancel this list')",
+    "linked_spreadsheet_exhibits": "04,06,09"
+  },
+  {
+    "exhibit_number": 5,
+    "date": "2025-04-01T10:07:00",
+    "sender": "McDonald, Michael (mmcdonald@neh.gov)",
+    "recipients": "Justin Fox (justin.fox@gsa.gov)",
+    "subject": "The N/A spreadsheet",
+    "key_actions": "McDonald sends N/A spreadsheet to Fox with annotations; McDonald expresses concern: N/A grants 'have no applicability to promoting DEI'; McDonald warns many DEI Rationale comments say 'no direct connection to DEI'; McDonald explicitly initialed only key projects (e.g., Papers of George Washington); McDonald recommends grants with no DEI component should continue; McDonald acknowledges DOGE also wants to cancel for deficit reduction; CRITICAL: McDonald states 'it's your decision on whether to discontinue funding any of the projects on this list' -- key ultra vires evidence; Fox collects grants flagged to keep, demands final approval under time pressure",
+    "linked_spreadsheet_exhibits": "04,06,09"
+  },
+  {
+    "exhibit_number": 23,
+    "date": "2025-04-01T10:07:00",
+    "sender": "McDonald, Michael (mmcdonald@neh.gov)",
+    "recipients": "Justin Fox (justin.fox@gsa.gov)",
+    "subject": "The N/A spreadsheet",
+    "key_actions": "Complete termination approval chain from morning to night on April 1-2, 2025; McDonald sends N/A spreadsheet at 10:07 AM with 'it's your decision' statement; Fox sends updated grant lists throughout the day; McDonald returns initialed review at 5:05 PM; Fox cites EO 14217 as legal basis for terminations; Fox sends draft termination letter at 10:26 PM; Fox proposes sending from special email vs. McDonald's personal email; McDonald approves termination letter language on April 2 at 3:15 PM; This chain is the fuller version of Exhibit 5",
+    "linked_spreadsheet_exhibits": "05,20,22"
+  },
+  {
+    "exhibit_number": 5,
+    "date": "2025-04-01T15:50:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "NEH Grants Termination",
+    "key_actions": "McDonald sends N/A spreadsheet to Fox with annotations; McDonald expresses concern: N/A grants 'have no applicability to promoting DEI'; McDonald warns many DEI Rationale comments say 'no direct connection to DEI'; McDonald explicitly initialed only key projects (e.g., Papers of George Washington); McDonald recommends grants with no DEI component should continue; McDonald acknowledges DOGE also wants to cancel for deficit reduction; CRITICAL: McDonald states 'it's your decision on whether to discontinue funding any of the projects on this list' -- key ultra vires evidence; Fox collects grants flagged to keep, demands final approval under time pressure",
+    "linked_spreadsheet_exhibits": "04,06,09"
+  },
+  {
+    "exhibit_number": 23,
+    "date": "2025-04-01T15:50:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "NEH Grants Termination",
+    "key_actions": "Complete termination approval chain from morning to night on April 1-2, 2025; McDonald sends N/A spreadsheet at 10:07 AM with 'it's your decision' statement; Fox sends updated grant lists throughout the day; McDonald returns initialed review at 5:05 PM; Fox cites EO 14217 as legal basis for terminations; Fox sends draft termination letter at 10:26 PM; Fox proposes sending from special email vs. McDonald's personal email; McDonald approves termination letter language on April 2 at 3:15 PM; This chain is the fuller version of Exhibit 5",
+    "linked_spreadsheet_exhibits": "05,20,22"
+  },
+  {
+    "exhibit_number": 5,
+    "date": "2025-04-01T16:17:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "RE: NEH Grants Termination",
+    "key_actions": "McDonald sends N/A spreadsheet to Fox with annotations; McDonald expresses concern: N/A grants 'have no applicability to promoting DEI'; McDonald warns many DEI Rationale comments say 'no direct connection to DEI'; McDonald explicitly initialed only key projects (e.g., Papers of George Washington); McDonald recommends grants with no DEI component should continue; McDonald acknowledges DOGE also wants to cancel for deficit reduction; CRITICAL: McDonald states 'it's your decision on whether to discontinue funding any of the projects on this list' -- key ultra vires evidence; Fox collects grants flagged to keep, demands final approval under time pressure",
+    "linked_spreadsheet_exhibits": "04,06,09"
+  },
+  {
+    "exhibit_number": 23,
+    "date": "2025-04-01T16:17:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "RE: NEH Grants Termination",
+    "key_actions": "Complete termination approval chain from morning to night on April 1-2, 2025; McDonald sends N/A spreadsheet at 10:07 AM with 'it's your decision' statement; Fox sends updated grant lists throughout the day; McDonald returns initialed review at 5:05 PM; Fox cites EO 14217 as legal basis for terminations; Fox sends draft termination letter at 10:26 PM; Fox proposes sending from special email vs. McDonald's personal email; McDonald approves termination letter language on April 2 at 3:15 PM; This chain is the fuller version of Exhibit 5",
+    "linked_spreadsheet_exhibits": "05,20,22"
+  },
+  {
+    "exhibit_number": 23,
+    "date": "2025-04-01T17:05:00",
+    "sender": "McDonald, Michael (mmcdonald@neh.gov)",
+    "recipients": "Justin Fox (justin.fox@gsa.gov)",
+    "subject": "RE: NEH Grants Termination",
+    "key_actions": "Complete termination approval chain from morning to night on April 1-2, 2025; McDonald sends N/A spreadsheet at 10:07 AM with 'it's your decision' statement; Fox sends updated grant lists throughout the day; McDonald returns initialed review at 5:05 PM; Fox cites EO 14217 as legal basis for terminations; Fox sends draft termination letter at 10:26 PM; Fox proposes sending from special email vs. McDonald's personal email; McDonald approves termination letter language on April 2 at 3:15 PM; This chain is the fuller version of Exhibit 5",
+    "linked_spreadsheet_exhibits": "05,20,22"
+  },
+  {
+    "exhibit_number": 23,
+    "date": "2025-04-01T19:55:50",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "RE: NEH Grants Termination",
+    "key_actions": "Complete termination approval chain from morning to night on April 1-2, 2025; McDonald sends N/A spreadsheet at 10:07 AM with 'it's your decision' statement; Fox sends updated grant lists throughout the day; McDonald returns initialed review at 5:05 PM; Fox cites EO 14217 as legal basis for terminations; Fox sends draft termination letter at 10:26 PM; Fox proposes sending from special email vs. McDonald's personal email; McDonald approves termination letter language on April 2 at 3:15 PM; This chain is the fuller version of Exhibit 5",
+    "linked_spreadsheet_exhibits": "05,20,22"
+  },
+  {
+    "exhibit_number": 23,
+    "date": "2025-04-01T20:06:00",
+    "sender": "McDonald, Michael (mmcdonald@neh.gov)",
+    "recipients": "Justin Fox (justin.fox@gsa.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "Re: NEH Grants Termination",
+    "key_actions": "Complete termination approval chain from morning to night on April 1-2, 2025; McDonald sends N/A spreadsheet at 10:07 AM with 'it's your decision' statement; Fox sends updated grant lists throughout the day; McDonald returns initialed review at 5:05 PM; Fox cites EO 14217 as legal basis for terminations; Fox sends draft termination letter at 10:26 PM; Fox proposes sending from special email vs. McDonald's personal email; McDonald approves termination letter language on April 2 at 3:15 PM; This chain is the fuller version of Exhibit 5",
+    "linked_spreadsheet_exhibits": "05,20,22"
+  },
+  {
+    "exhibit_number": 23,
+    "date": "2025-04-01T22:26:00",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "RE: NEH Grants Termination",
+    "key_actions": "Complete termination approval chain from morning to night on April 1-2, 2025; McDonald sends N/A spreadsheet at 10:07 AM with 'it's your decision' statement; Fox sends updated grant lists throughout the day; McDonald returns initialed review at 5:05 PM; Fox cites EO 14217 as legal basis for terminations; Fox sends draft termination letter at 10:26 PM; Fox proposes sending from special email vs. McDonald's personal email; McDonald approves termination letter language on April 2 at 3:15 PM; This chain is the fuller version of Exhibit 5",
+    "linked_spreadsheet_exhibits": "05,20,22"
+  },
+  {
+    "exhibit_number": 23,
+    "date": "2025-04-02T15:15:06",
+    "sender": "McDonald, Michael (mmcdonald@neh.gov)",
+    "recipients": "Justin Fox (justin.fox@gsa.gov), Wolfson, Adam (awolfson@neh.gov)",
+    "subject": "RE: NEH Grants Termination",
+    "key_actions": "Complete termination approval chain from morning to night on April 1-2, 2025; McDonald sends N/A spreadsheet at 10:07 AM with 'it's your decision' statement; Fox sends updated grant lists throughout the day; McDonald returns initialed review at 5:05 PM; Fox cites EO 14217 as legal basis for terminations; Fox sends draft termination letter at 10:26 PM; Fox proposes sending from special email vs. McDonald's personal email; McDonald approves termination letter language on April 2 at 3:15 PM; This chain is the fuller version of Exhibit 5",
+    "linked_spreadsheet_exhibits": "05,20,22"
+  },
+  {
+    "exhibit_number": 35,
+    "date": "2025-04-02T23:35:00",
+    "sender": "Grant Notification",
+    "recipients": "ecarroll@acls.org",
+    "subject": "Notice of Grant Termination - Effective April 2, 2025",
+    "key_actions": "Actual termination email sent to ACLS (Emily Carroll); Grant CHC30455325 terminated effective April 2, 2025; Sent from generic 'Grant Notification' address; Signed as Michael McDonald, Acting Chairman; This is the transmittal email; attached PDF is the formal notice (see Exhibit 37)",
+    "linked_spreadsheet_exhibits": null
+  },
+  {
+    "exhibit_number": 22,
+    "date": "2025-04-03T05:59:49",
+    "sender": "Fox, Justin (jfox@neh.gov)",
+    "recipients": "McDonald, Michael (mmcdonald@neh.gov)",
+    "subject": "Terminated Grants",
+    "key_actions": "CRITICAL: Fox confirms 1,208 of 1,220 organizational grants terminated overnight (April 2-3); 12 emails undeliverable, to be tracked down; Terminations effective April 2, 2025; Individual and State/Fed partnership terminations still pending sign-off on language; Fox is using NEH email address (jfox@neh.gov) -- shows he had NEH account; Awaiting updated census (for RIF planning)",
+    "linked_spreadsheet_exhibits": "24"
+  },
+  {
+    "exhibit_number": 10,
+    "date": "2025-04-03T12:09:10",
+    "sender": "Justin Fox (justin.fox@gsa.gov)",
+    "recipients": "jfox@neh.gov",
+    "subject": "Crazy grants",
+    "key_actions": "Fox emails himself (GSA to NEH account) a spreadsheet titled 'NEH Grants vJF'; Subject line 'Crazy grants' reveals Fox's attitude toward the grants; No email body -- just the attachment; Sent same day as mass termination confirmations (April 3)",
+    "linked_spreadsheet_exhibits": "11"
+  },
+  {
+    "exhibit_number": 19,
+    "date": "2025-04-08T18:07:00",
+    "sender": "Thornton, Christopher (cthornton@neh.gov)",
+    "recipients": "Paige Cottinghamstreater (pcottinghamstreater@jusfc.gov), Niharika Chibber Joe (NJoe@jusfc.gov)",
+    "subject": "Terminated NEH-JUSFC fellowships",
+    "key_actions": "Five NEH-JUSFC fellowships terminated by DOGE (per Acting Chairman McDonald); NEH unable to reinstate despite attempts; Thornton states 'this was not an agency decision'; McDonald reportedly open to funding new JUSFC fellowships at November meeting; Terminated fellows encouraged to re-apply at April 23 deadline; JUSFC needs to arrange return of unspent funds; Thornton expresses personal disappointment",
+    "linked_spreadsheet_exhibits": null
+  },
+  {
+    "exhibit_number": 19,
+    "date": "2025-04-08T22:13:31",
+    "sender": "Thornton, Christopher (cthornton@neh.gov)",
+    "recipients": "Kinkela, Claudia (ckinkela@neh.gov), Sack, Daniel (dsack@neh.gov)",
+    "subject": "FW: Terminated NEH-JUSFC fellowships",
+    "key_actions": "Five NEH-JUSFC fellowships terminated by DOGE (per Acting Chairman McDonald); NEH unable to reinstate despite attempts; Thornton states 'this was not an agency decision'; McDonald reportedly open to funding new JUSFC fellowships at November meeting; Terminated fellows encouraged to re-apply at April 23 deadline; JUSFC needs to arrange return of unspent funds; Thornton expresses personal disappointment",
+    "linked_spreadsheet_exhibits": null
+  },
+  {
+    "exhibit_number": 18,
+    "date": "2025-04-09T00:00:00",
+    "sender": "Theresa Dismont (Theresa.M.Dismont@Dartmouth.edu)",
+    "recipients": "Bobley, Brett (bbobley@neh.gov)",
+    "subject": "[Re: award HAA-300911]",
+    "key_actions": "Dartmouth discovers award HAA-300911-24 terminated ($349,812 award, $332,080.50 remaining); Bobley confirms DOGE cancelled the award; CRITICAL: Bobley states 'NEH staff, like myself, didn't realize it was happening'; CRITICAL: Bobley states 'DOGE directly emailed nearly every active NEH grantee and told them their grants were canceled'; Grant was for 'Archaeology of Indigenous Agricultural Landscapes' -- period 01/01/2024-09/30/2027; Shows DOGE bypassed NEH staff entirely in executing terminations",
+    "linked_spreadsheet_exhibits": null
+  },
+  {
+    "exhibit_number": 18,
+    "date": "2025-04-09T17:44:37",
+    "sender": "Bobley, Brett (bbobley@neh.gov)",
+    "recipients": "Theresa Dismont (Theresa.M.Dismont@Dartmouth.edu)",
+    "subject": "Sad news about your award, HAA-300911",
+    "key_actions": "Dartmouth discovers award HAA-300911-24 terminated ($349,812 award, $332,080.50 remaining); Bobley confirms DOGE cancelled the award; CRITICAL: Bobley states 'NEH staff, like myself, didn't realize it was happening'; CRITICAL: Bobley states 'DOGE directly emailed nearly every active NEH grantee and told them their grants were canceled'; Grant was for 'Archaeology of Indigenous Agricultural Landscapes' -- period 01/01/2024-09/30/2027; Shows DOGE bypassed NEH staff entirely in executing terminations",
+    "linked_spreadsheet_exhibits": null
+  }
+]
