@@ -62,7 +62,7 @@ export function GrantExplorer() {
   const [selectedGrant, setSelectedGrant] = useState<Grant | null>(null)
 
   useEffect(() => {
-    fetch("/grants_sample.json")
+    fetch(import.meta.env.BASE_URL + "grants_sample.json")
       .then((r) => r.json())
       .then((data: Grant[]) => setGrants(data))
       .catch(() => {})

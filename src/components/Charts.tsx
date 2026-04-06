@@ -80,11 +80,11 @@ export function Charts() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/grants_sample.json").then((r) => r.json()),
-      fetch("/ep_expanded.json").then((r) => r.json()),
-      fetch("/ep_combined.json").then((r) => r.json()),
-      fetch("/why_terminated.json").then((r) => r.json()),
-      fetch("/kept_flagged.json").then((r) => r.json()),
+      fetch(import.meta.env.BASE_URL + "grants_sample.json").then((r) => r.json()),
+      fetch(import.meta.env.BASE_URL + "ep_expanded.json").then((r) => r.json()),
+      fetch(import.meta.env.BASE_URL + "ep_combined.json").then((r) => r.json()),
+      fetch(import.meta.env.BASE_URL + "why_terminated.json").then((r) => r.json()),
+      fetch(import.meta.env.BASE_URL + "kept_flagged.json").then((r) => r.json()),
     ]).then(([gr, epOrig, epComb, why, kept]) => {
       setGrants(gr)
       setEpOriginal(epOrig)

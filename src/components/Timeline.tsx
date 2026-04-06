@@ -65,7 +65,7 @@ export function Timeline() {
   const [actorFilter, setActorFilter] = useState<string>("all")
 
   useEffect(() => {
-    fetch("/timeline.json")
+    fetch(import.meta.env.BASE_URL + "timeline.json")
       .then((r) => r.json())
       .then((data: TimelineEvent[]) => setEvents(dedupeEvents(data)))
       .catch(() => {})

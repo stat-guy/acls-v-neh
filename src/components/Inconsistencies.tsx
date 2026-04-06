@@ -42,7 +42,7 @@ export function Inconsistencies() {
   const [severityFilter, setSeverityFilter] = useState("all")
 
   useEffect(() => {
-    fetch("/inconsistencies.json")
+    fetch(import.meta.env.BASE_URL + "inconsistencies.json")
       .then((r) => r.json())
       .then((d: Inconsistency[]) => setData(d))
       .catch(() => {})
