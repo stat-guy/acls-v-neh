@@ -1,0 +1,17 @@
+[
+  {
+    "reason": "No DEI flag",
+    "grants": 1014,
+    "funds": 103758600.0
+  },
+  {
+    "reason": "Fox DEI override",
+    "grants": 434,
+    "funds": 44803350.0
+  },
+  {
+    "reason": "Both flagged DEI",
+    "grants": 29,
+    "funds": 823293.0
+  }
+]

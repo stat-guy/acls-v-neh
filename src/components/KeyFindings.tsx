@@ -70,6 +70,33 @@ const findings: Finding[] = [
       "The timeline ran from March 12 (Cavanaugh's first email with the grant list) to April 2 (mass termination notices sent). In that 22-day window: no NEH program officers were consulted on any termination decision, no peer review process was followed, termination letters bore a forged signature of an official who had not reviewed or approved them, and communications used an unofficial email address. Standard federal grant termination procedures require notice, opportunity to respond, and documented justification -- none of which occurred.",
     exhibits: [20, 22, 27],
   },
+  {
+    id: 8,
+    title: "The Signal Paper Trail Gap",
+    summary:
+      "DOGE operatives used auto-deleting Signal messages for key communications, leaving no record.",
+    detail:
+      "Fox downloaded Signal at DOGE recruiter Anthony Armstrong's direction before joining government. He continued using it after receiving a government phone. Cavanaugh forwarded government emails to his personal account, then sent them via Signal to DOGE boss Steve Davis. When asked about records training on auto-delete, Cavanaugh said he 'honestly don't recall.' Fox denied substantive NEH discussions on Signal — but his pre-hire conversations where the project was conceived are permanently gone.",
+    exhibits: [1, 2],
+  },
+  {
+    id: 9,
+    title: "Every State Lost Funding",
+    summary:
+      "All 100 State Humanities Council grants ($23.3M) were terminated — impacting libraries and cultural programs in every state.",
+    detail:
+      "State Humanities Councils fund local libraries, museums, reading programs, and cultural events in rural and underserved communities across all 50 states and U.S. territories. Every single general operating support grant — 100 out of 100 — was terminated, totaling $23.3 million. Unlike university research grants, these directly serve the public. Their elimination means immediate loss of programming for communities with few other cultural resources.",
+    exhibits: [25, 39],
+  },
+  {
+    id: 10,
+    title: "Endangered Languages Silenced",
+    summary:
+      "Grants preserving Lakota, Mayan, Yiddish, and other endangered languages were all terminated.",
+    detail:
+      "Multiple grants for documenting and preserving critically endangered languages were terminated — including Lakota language interviews at Oglala Lakota College (flagged as DEI for involving 'Lakota elders'), a Maya lexical database at UT Austin, Yiddish OCR tools at the National Yiddish Book Center, and Indigenous language persistence tools at Northeastern University. Language documentation is time-sensitive: when elder speakers die, the data is gone forever. These terminations caused irreversible loss.",
+    exhibits: [12, 39],
+  },
 ]
 
 export function KeyFindings() {
