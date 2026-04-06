@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import { Canvas, useFrame, type ThreeEvent } from "@react-three/fiber"
 import { OrbitControls, Html } from "@react-three/drei"
+import { AxisHelper } from "./AxisHelper"
 import * as THREE from "three"
 
 interface GalaxyGrant {
@@ -258,6 +259,7 @@ export function GrantGalaxyScene({ data, animKey, playing, onAnimEnd }: ScenePro
     >
       <ambientLight intensity={0.6} />
       <pointLight position={[10, 10, 10]} intensity={0.8} />
+      <AxisHelper size={8} labels={{ x: "Program →", y: "Funding →", z: "Depth →" }} />
       <Particles data={data} animKey={animKey} playing={playing} onAnimEnd={onAnimEnd} />
       <OrbitControls
         autoRotate

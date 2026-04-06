@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback, useMemo } from "react"
-import { Canvas, useFrame } from "@react-three/fiber"
+import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Line, Html } from "@react-three/drei"
+import { AxisHelper } from "./AxisHelper"
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib"
 import * as THREE from "three"
 
@@ -66,10 +67,10 @@ function nodeRadius(weight: number, minW: number, maxW: number): number {
 /* ------------------------------------------------------------------ */
 
 function runForceLayout(nodes: SimNode[], edges: NetworkEdge[], iterations: number) {
-  const REPULSION = 8
-  const ATTRACTION = 0.005
+  const REPULSION = 15
+  const ATTRACTION = 0.003
   const DAMPING = 0.9
-  const MAX_DISPLACEMENT = 1.5
+  const MAX_DISPLACEMENT = 2.0
 
   const idxMap = new Map<string, number>()
   nodes.forEach((n, i) => idxMap.set(n.id, i))
@@ -260,38 +261,57 @@ function EdgeLine({ source, target, edge, isHighlighted, maxWeight }: EdgeLinePr
 
 interface SceneProps {
   data: NetworkData
+  animKey: number
 }
 
-function Scene({ data }: SceneProps) {
+function Scene({ data, animKey }: SceneProps) {
   const controlsRef = useRef<OrbitControlsImpl>(null)
   const [selectedNode, setSelectedNode] = useState<string | null>(null)
   const [, setHoveredNode] = useState<string | null>(null)
 
-  // Build simulation nodes with force layout
-  const { simNodes, minWeight, maxWeight, maxEdgeWeight } = useMemo(() => {
-    const minW = Math.min(...data.nodes.map((n) => n.weight))
-    const maxW = Math.max(...data.nodes.map((n) => n.weight))
-    const maxEW = Math.max(...data.edges.map((e) => e.weight), 1)
-
-    // Deterministic seed based on node id for reproducible layout
+  // Build simulation nodes with force layout (recompute on animKey change)
+  const layoutResult = useMemo(() => {
+    // FNV-1a hash → deterministic float in [-0.5, 0.5)
     const seed = (s: string) => {
-      let h = 0
-      for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0
-      return ((h & 0x7fffffff) / 0x7fffffff) - 0.5
+      let h = 0x811c9dc5
+      for (let i = 0; i < s.length; i++) {
+        h ^= s.charCodeAt(i)
+        h = Math.imul(h, 0x01000193)
+      }
+      return ((h >>> 0) / 0xffffffff) - 0.5
     }
     const sn: SimNode[] = data.nodes.map((n, i) => ({
       ...n,
-      x: seed(n.id + "x" + i) * 6,
-      y: seed(n.id + "y" + i) * 6,
-      z: seed(n.id + "z" + i) * 3,
-      vx: 0,
-      vy: 0,
-      vz: 0,
+      x: seed(n.id + ":x:" + i + ":" + animKey) * 8,
+      y: seed(n.id + ":y:" + i + ":" + animKey) * 8,
+      z: seed(n.id + ":z:" + i + ":" + animKey) * 4,
+      vx: 0, vy: 0, vz: 0,
     }))
-
     runForceLayout(sn, data.edges, 150)
-    return { simNodes: sn, minWeight: minW, maxWeight: maxW, maxEdgeWeight: maxEW }
-  }, [data])
+
+    // Normalize positions to fit within [-6, 6] bounding box
+    let maxAbs = 0
+    for (const n of sn) {
+      maxAbs = Math.max(maxAbs, Math.abs(n.x), Math.abs(n.y), Math.abs(n.z))
+    }
+    if (maxAbs > 0) {
+      const scale = 6 / maxAbs
+      for (const n of sn) {
+        n.x *= scale
+        n.y *= scale
+        n.z *= scale
+      }
+    }
+
+    return {
+      simNodes: sn,
+      minWeight: Math.min(...data.nodes.map((n) => n.weight)),
+      maxWeight: Math.max(...data.nodes.map((n) => n.weight)),
+      maxEdgeWeight: Math.max(...data.edges.map((e) => e.weight), 1),
+    }
+  }, [data, animKey])
+
+  const { simNodes } = layoutResult
 
   const nodeMap = useMemo(() => {
     const m = new Map<string, SimNode>()
@@ -322,18 +342,12 @@ function Scene({ data }: SceneProps) {
     setSelectedNode(null)
   }, [])
 
-  // Slow auto-rotate, stops on interaction
-  useFrame(() => {
-    if (controlsRef.current) {
-      controlsRef.current.update()
-    }
-  })
-
   return (
     <>
       <ambientLight intensity={0.6} />
       <pointLight position={[10, 10, 10]} intensity={0.8} />
       <pointLight position={[-10, -10, -5]} intensity={0.3} />
+      <AxisHelper size={6} labels={{ x: "Influence →", y: "Authority →", z: "Depth →" }} />
 
       <group onPointerMissed={handlePointerMissed}>
         {/* Edges */}
@@ -348,7 +362,7 @@ function Scene({ data }: SceneProps) {
               target={tgt}
               edge={edge}
               isHighlighted={connectedEdgeSet.has(i)}
-              maxWeight={maxEdgeWeight}
+              maxWeight={layoutResult.maxEdgeWeight}
             />
           )
         })}
@@ -358,7 +372,7 @@ function Scene({ data }: SceneProps) {
           <NodeMesh
             key={node.id}
             node={node}
-            radius={nodeRadius(node.weight, minWeight, maxWeight)}
+            radius={nodeRadius(node.weight, layoutResult.minWeight, layoutResult.maxWeight)}
             color={GROUP_COLORS[node.group] ?? "#6b7280"}
             isHighlighted={
               selectedNode === node.id ||
@@ -456,6 +470,7 @@ function LoadingSpinner() {
 export function NetworkGraph() {
   const [data, setData] = useState<NetworkData | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [animKey, setAnimKey] = useState(0)
 
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + "network.json")
@@ -493,13 +508,19 @@ export function NetworkGraph() {
                 camera={{ position: [0, 0, 15], fov: 50 }}
                 style={{ background: "transparent" }}
               >
-                <Scene data={data} />
+                <Scene data={data} animKey={animKey} />
               </Canvas>
             </React.Suspense>
           )}
         </div>
-        <div className="border-t border-border/50 px-4 py-3">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-border/50 px-4 py-3">
           <Legend />
+          <button
+            onClick={() => setAnimKey((k) => k + 1)}
+            className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors"
+          >
+            Replay Layout
+          </button>
         </div>
       </div>
     </section>
