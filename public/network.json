@@ -1,0 +1,214 @@
+{
+  "nodes": [
+    {
+      "id": "Justin Fox",
+      "role": "DOGE team member assigned to NEH (associated with DOGE per Exhibit 33 RFA 1)",
+      "organization": "DOGE/GSA",
+      "group": "doge",
+      "weight": 17
+    },
+    {
+      "id": "Nate Cavanaugh",
+      "role": "DOGE team member assigned to NEH (associated with DOGE per Exhibit 33 RFA 1)",
+      "organization": "DOGE/GSA",
+      "group": "doge",
+      "weight": 1
+    },
+    {
+      "id": "Michael McDonald",
+      "role": "Acting Chairman, National Endowment for the Humanities",
+      "organization": "NEH",
+      "group": "neh",
+      "weight": 26
+    },
+    {
+      "id": "Adam Wolfson",
+      "role": "NEH official (co-reviewer with McDonald)",
+      "organization": "NEH",
+      "group": "neh",
+      "weight": 2
+    },
+    {
+      "id": "Brett Bobley",
+      "role": "NEH Chief Information Officer",
+      "organization": "NEH",
+      "group": "neh",
+      "weight": 4
+    },
+    {
+      "id": "Christopher Thornton",
+      "role": "Director, Division of Research Programs",
+      "organization": "NEH",
+      "group": "neh",
+      "weight": 3
+    },
+    {
+      "id": "Richard Brundage",
+      "role": "NEH (CC'd on original review)",
+      "organization": "NEH",
+      "group": "neh",
+      "weight": 1
+    },
+    {
+      "id": "Claudia Kinkela",
+      "role": "NEH staff",
+      "organization": "NEH",
+      "group": "neh",
+      "weight": 1
+    },
+    {
+      "id": "Daniel Sack",
+      "role": "NEH staff",
+      "organization": "NEH",
+      "group": "neh",
+      "weight": 1
+    },
+    {
+      "id": "Mark Silver",
+      "role": "NEH staff",
+      "organization": "NEH",
+      "group": "neh",
+      "weight": 1
+    },
+    {
+      "id": "Cecily Dennis",
+      "role": "NEH Director of Acquisitions",
+      "organization": "NEH",
+      "group": "neh",
+      "weight": 1
+    },
+    {
+      "id": "Emily Carroll",
+      "role": "ACLS representative, termination notice recipient",
+      "organization": "External",
+      "group": "other",
+      "weight": 1
+    },
+    {
+      "id": "Theresa Dismont",
+      "role": "Senior Grant Accountant, Dartmouth College",
+      "organization": "External",
+      "group": "other",
+      "weight": 1
+    },
+    {
+      "id": "Elizabeth Nicole Kadetsky",
+      "role": "Individual NEH grantee, termination recipient",
+      "organization": "External",
+      "group": "other",
+      "weight": 1
+    },
+    {
+      "id": "Paige Cottinghamstreater",
+      "role": "JUSFC",
+      "organization": "External",
+      "group": "other",
+      "weight": 1
+    },
+    {
+      "id": "Niharika Chibber Joe",
+      "role": "JUSFC",
+      "organization": "External",
+      "group": "other",
+      "weight": 1
+    }
+  ],
+  "edges": [
+    {
+      "source": "Bobley",
+      "target": "!Division Directors",
+      "weight": 1,
+      "type": "neutral"
+    },
+    {
+      "source": "Justin Fox",
+      "target": "McDonald",
+      "weight": 16,
+      "type": "directive"
+    },
+    {
+      "source": "McDonald",
+      "target": "Justin Fox",
+      "weight": 8,
+      "type": "compliance"
+    },
+    {
+      "source": "Wolfson",
+      "target": "nate.cavanaugh@gsa.gov",
+      "weight": 1,
+      "type": "compliance"
+    },
+    {
+      "source": "Justin Fox",
+      "target": "jfox@neh.gov",
+      "weight": 1,
+      "type": "neutral"
+    },
+    {
+      "source": "Bobley",
+      "target": "Theresa Dismont",
+      "weight": 1,
+      "type": "neutral"
+    },
+    {
+      "source": "Theresa Dismont",
+      "target": "Bobley",
+      "weight": 1,
+      "type": "neutral"
+    },
+    {
+      "source": "Thornton",
+      "target": "Kinkela",
+      "weight": 1,
+      "type": "neutral"
+    },
+    {
+      "source": "Thornton",
+      "target": "Paige Cottinghamstreater",
+      "weight": 1,
+      "type": "neutral"
+    },
+    {
+      "source": "Fox",
+      "target": "McDonald",
+      "weight": 2,
+      "type": "directive"
+    },
+    {
+      "source": "Nate Cavanaugh",
+      "target": "McDonald",
+      "weight": 1,
+      "type": "directive"
+    },
+    {
+      "source": "Grant Notification",
+      "target": "ecarroll@acls.org",
+      "weight": 1,
+      "type": "neutral"
+    },
+    {
+      "source": "Steve Davis",
+      "target": "Nate Cavanaugh",
+      "weight": 3,
+      "type": "reporting"
+    },
+    {
+      "source": "Nate Cavanaugh",
+      "target": "Justin Fox",
+      "weight": 5,
+      "type": "reporting"
+    },
+    {
+      "source": "Anthony Armstrong",
+      "target": "Justin Fox",
+      "weight": 2,
+      "type": "reporting"
+    },
+    {
+      "source": "Joshua Gruenbaum",
+      "target": "Justin Fox",
+      "weight": 2,
+      "type": "reporting"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, lazy, Suspense } from "react"
 import { useTheme } from "@/components/theme-provider"
 import { Hero } from "@/components/Hero"
 import { KeyFindings } from "@/components/KeyFindings"
@@ -7,6 +7,9 @@ import { GrantExplorer } from "@/components/GrantExplorer"
 import { Inconsistencies } from "@/components/Inconsistencies"
 import { Charts } from "@/components/Charts"
 import { SourceDocuments } from "@/components/SourceDocuments"
+
+const GrantGalaxy = lazy(() => import("@/components/GrantGalaxy"))
+const NetworkGraph = lazy(() => import("@/components/NetworkGraph"))
 import { Moon, Sun, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -16,6 +19,8 @@ const NAV_ITEMS = [
   { label: "Grants", href: "#grants" },
   { label: "Inconsistencies", href: "#inconsistencies" },
   { label: "Charts", href: "#charts" },
+  { label: "Network", href: "#network" },
+  { label: "Galaxy", href: "#galaxy" },
   { label: "Sources", href: "#sources" },
 ]
 
@@ -136,6 +141,12 @@ export function App() {
         <GrantExplorer />
         <Inconsistencies />
         <Charts />
+        <Suspense fallback={null}>
+          <NetworkGraph />
+        </Suspense>
+        <Suspense fallback={null}>
+          <GrantGalaxy />
+        </Suspense>
         <SourceDocuments />
       </main>
     </div>
