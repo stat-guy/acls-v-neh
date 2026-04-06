@@ -42,10 +42,7 @@ interface Grant {
 interface EpCategory {
   category: string
   grants: number
-  approved: number
   remaining: number
-  exhibit_24_count: number
-  keyword_match_count: number
 }
 
 interface WhyTerminated {
@@ -144,15 +141,15 @@ export function Charts() {
     "Sex/Gender": "rgba(245, 158, 11, 0.8)",
     "Sexuality": "rgba(251, 191, 36, 0.8)",
     "Religion": "rgba(252, 211, 77, 0.8)",
-    "No protected class detected": "rgba(120, 120, 120, 0.6)",
+    "No EP claim": "rgba(120, 120, 120, 0.6)",
   }
 
   const chart1Data = {
     labels: epData.map((e) => e.category),
     datasets: [
       {
-        label: "Approved Amount ($)",
-        data: epData.map((e) => e.approved),
+        label: "Funds Terminated ($)",
+        data: epData.map((e) => e.remaining),
         backgroundColor: epData.map((e) => warmColors[e.category] ?? "rgba(160,160,160,0.5)"),
         borderColor: epData.map((e) => (warmColors[e.category] ?? "rgba(160,160,160,0.7)").replace("0.8)", "1)").replace("0.6)", "0.8)")),
         borderWidth: 1,
@@ -196,7 +193,7 @@ export function Charts() {
         grid: { color: gridColor },
         title: {
           display: true,
-          text: "Approved Amount",
+          text: "Funds Terminated (Remaining Amount)",
           color: chartTextColor,
           font: { size: 11 },
         },
@@ -212,7 +209,7 @@ export function Charts() {
   }
 
   const epTotalGrants = epData.reduce((s, e) => s + e.grants, 0)
-  const epTotalApproved = epData.reduce((s, e) => s + e.approved, 0)
+  const epTotalFunds = epData.reduce((s, e) => s + e.remaining, 0)
 
   /* ============================================================
      Chart 2 — The 22-Day Blitz (preserved exactly)
@@ -384,16 +381,16 @@ export function Charts() {
               Equal Protection — Funds Terminated by Category
             </h4>
             <p className="mb-4 text-sm text-muted-foreground">
-              Approved funding for terminated grants, grouped by the protected class referenced in the grant&apos;s description or DEI rationale.
+              Remaining funds terminated, grouped by the protected class referenced in the grant&apos;s description or DEI rationale.
             </p>
             <div style={{ height: 400 }}>
               <Bar data={chart1Data} options={chart1Options} />
             </div>
             <p className="mt-4 text-sm font-medium text-muted-foreground">
-              Total: {epTotalGrants.toLocaleString()} grants terminated | {formatDollars(epTotalApproved)} in remaining funds
+              Total: {epTotalGrants.toLocaleString()} grants terminated | {formatDollars(epTotalFunds)} in terminated funds
             </p>
             <p className="mt-2 text-xs text-muted-foreground/70">
-              74 grants identified by plaintiffs (Exhibit 24). 337 additional grants classified by keyword analysis of descriptions and DEI rationales.
+              74 grants explicitly identified by plaintiffs in Exhibit 24. The remaining 1,403 grants are categorized as &quot;No EP claim.&quot;
             </p>
           </div>
 
@@ -455,50 +452,9 @@ export function Charts() {
               </CardContent>
             </Card>
 
-            {/* Card B: 68.6% Got No Rationale */}
-            <Card className="glass-card border-0">
-              <CardHeader>
-                <CardTitle className="text-lg">68.6% Got No Rationale</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <p className="text-5xl font-extrabold text-red-400">68.6%</p>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      of terminated grants received zero individualized explanation
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-5xl font-extrabold text-red-400">1,013</p>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      grants terminated with only boilerplate language
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-2">
-            {/* Card C: Zero DEI Connection */}
-            <Card className="glass-card border-0">
-              <CardHeader>
-                <CardTitle className="text-lg">Zero DEI Connection</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-6xl font-extrabold text-red-400">1,014</p>
-                <p className="mt-2 text-lg font-medium text-muted-foreground">
-                  grants terminated with no DEI connection by any measure
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground/70">
-                  Not flagged by staff. Not flagged by ChatGPT. Not flagged by Fox. Terminated anyway.
-                </p>
-                <p className="mt-3 text-xl font-bold text-amber-400">
-                  {formatDollars(103758600)} in funds
-                </p>
-              </CardContent>
-            </Card>
-
             {/* Card E: The Keyword Asymmetry */}
             <Card className="glass-card border-0">
               <CardHeader>

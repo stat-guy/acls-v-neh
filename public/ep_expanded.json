@@ -1,58 +1,37 @@
 [
   {
     "category": "Race",
-    "grants": 144,
-    "approved": 19766580,
-    "remaining": 11483718,
-    "exhibit_24_count": 31,
-    "keyword_match_count": 113
-  },
-  {
-    "category": "Race-Tribal",
-    "grants": 121,
-    "approved": 22552768,
-    "remaining": 14456079,
-    "exhibit_24_count": 12,
-    "keyword_match_count": 109
+    "grants": 32,
+    "remaining": 2142046
   },
   {
     "category": "National Origin / Ethnicity",
-    "grants": 76,
-    "approved": 12128572,
-    "remaining": 6971822,
-    "exhibit_24_count": 18,
-    "keyword_match_count": 58
+    "grants": 19,
+    "remaining": 1158072
   },
   {
-    "category": "Sex/Gender",
-    "grants": 35,
-    "approved": 3483577,
-    "remaining": 1392215,
-    "exhibit_24_count": 4,
-    "keyword_match_count": 31
+    "category": "Race-Tribal",
+    "grants": 15,
+    "remaining": 666218
   },
   {
     "category": "Sexuality",
-    "grants": 6,
-    "approved": 839653,
-    "remaining": 259025,
-    "exhibit_24_count": 2,
-    "keyword_match_count": 4
+    "grants": 3,
+    "remaining": 201560
+  },
+  {
+    "category": "Sex/Gender",
+    "grants": 4,
+    "remaining": 199986
   },
   {
     "category": "Religion",
-    "grants": 22,
-    "approved": 3941330,
-    "remaining": 2896164,
-    "exhibit_24_count": 1,
-    "keyword_match_count": 21
+    "grants": 1,
+    "remaining": 47522
   },
   {
-    "category": "No protected class detected",
-    "grants": 1073,
-    "approved": 359998943,
-    "remaining": 111926219,
-    "exhibit_24_count": 0,
-    "keyword_match_count": 0
+    "category": "No EP claim",
+    "grants": 1403,
+    "remaining": 144969839
   }
 ]
