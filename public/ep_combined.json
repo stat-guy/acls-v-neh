@@ -1,0 +1,51 @@
+[
+  {
+    "category": "Race",
+    "grants": 145,
+    "remaining": 11483718,
+    "exhibit_24": 32,
+    "keyword_match": 113
+  },
+  {
+    "category": "Race-Tribal",
+    "grants": 124,
+    "remaining": 14456079,
+    "exhibit_24": 15,
+    "keyword_match": 109
+  },
+  {
+    "category": "National Origin / Ethnicity",
+    "grants": 77,
+    "remaining": 6971822,
+    "exhibit_24": 19,
+    "keyword_match": 58
+  },
+  {
+    "category": "Sex/Gender",
+    "grants": 35,
+    "remaining": 1392215,
+    "exhibit_24": 4,
+    "keyword_match": 31
+  },
+  {
+    "category": "Religion",
+    "grants": 23,
+    "remaining": 2896164,
+    "exhibit_24": 1,
+    "keyword_match": 22
+  },
+  {
+    "category": "Sexuality",
+    "grants": 7,
+    "remaining": 259025,
+    "exhibit_24": 3,
+    "keyword_match": 4
+  },
+  {
+    "category": "No protected class detected",
+    "grants": 1066,
+    "remaining": 111926220,
+    "exhibit_24": 0,
+    "keyword_match": 0
+  }
+]

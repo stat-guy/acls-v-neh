@@ -43,6 +43,8 @@ interface EpCategory {
   category: string
   grants: number
   remaining: number
+  exhibit_24?: number
+  keyword_match?: number
 }
 
 interface WhyTerminated {
@@ -68,7 +70,9 @@ function formatDollars(n: number): string {
 
 export function Charts() {
   const [grants, setGrants] = useState<Grant[]>([])
-  const [epData, setEpData] = useState<EpCategory[]>([])
+  const [epOriginal, setEpOriginal] = useState<EpCategory[]>([])
+  const [epCombined, setEpCombined] = useState<EpCategory[]>([])
+  const [epMode, setEpMode] = useState<"combined" | "original">("combined")
   const [whyData, setWhyData] = useState<WhyTerminated[]>([])
   const [keptFlagged, setKeptFlagged] = useState<KeptFlagged[]>([])
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -78,11 +82,13 @@ export function Charts() {
     Promise.all([
       fetch("/grants_sample.json").then((r) => r.json()),
       fetch("/ep_expanded.json").then((r) => r.json()),
+      fetch("/ep_combined.json").then((r) => r.json()),
       fetch("/why_terminated.json").then((r) => r.json()),
       fetch("/kept_flagged.json").then((r) => r.json()),
-    ]).then(([gr, ep, why, kept]) => {
+    ]).then(([gr, epOrig, epComb, why, kept]) => {
       setGrants(gr)
-      setEpData(ep)
+      setEpOriginal(epOrig)
+      setEpCombined(epComb)
       setWhyData(why)
       setKeptFlagged(kept)
     }).catch(() => {})
@@ -113,6 +119,8 @@ export function Charts() {
     return { orgGrants, individualGrants, totalTerminated }
   }, [grants])
 
+  const epData = epMode === "combined" ? epCombined : epOriginal
+
   const chartTextColor = "rgba(160, 160, 160, 0.9)"
   const gridColor = "rgba(255,255,255,0.05)"
 
@@ -142,6 +150,7 @@ export function Charts() {
     "Sexuality": "rgba(251, 191, 36, 0.8)",
     "Religion": "rgba(252, 211, 77, 0.8)",
     "No EP claim": "rgba(120, 120, 120, 0.6)",
+    "No protected class detected": "rgba(120, 120, 120, 0.6)",
   }
 
   const chart1Data = {
@@ -163,7 +172,7 @@ export function Charts() {
     responsive: true,
     maintainAspectRatio: false,
     layout: {
-      padding: { right: 80 },
+      padding: { right: typeof window !== "undefined" && window.innerWidth < 640 ? 50 : 80 },
     },
     plugins: {
       legend: { display: false },
@@ -199,10 +208,10 @@ export function Charts() {
         },
       },
       y: {
-        ticks: { color: chartTextColor, font: { size: 11 }, autoSkip: false },
+        ticks: { color: chartTextColor, font: { size: typeof window !== "undefined" && window.innerWidth < 640 ? 9 : 11 }, autoSkip: false },
         grid: { display: false },
         afterFit: (axis: any): any => {
-          axis.width = 280
+          axis.width = typeof window !== "undefined" && window.innerWidth < 640 ? 160 : 280
         },
       },
     },
@@ -376,13 +385,39 @@ export function Charts() {
 
         <div className="grid gap-6">
           {/* Chart 1: Equal Protection — Funds Terminated by Category (full width) */}
-          <div className="glass-card rounded-xl p-6">
-            <h4 className="mb-1 text-lg font-semibold">
-              Equal Protection — Funds Terminated by Category
-            </h4>
-            <p className="mb-4 text-sm text-muted-foreground">
-              Remaining funds terminated, grouped by the protected class referenced in the grant&apos;s description or DEI rationale.
-            </p>
+          <div className="glass-card rounded-xl p-4 sm:p-6">
+            <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <h4 className="mb-1 text-lg font-semibold">
+                  Equal Protection — Funds Terminated by Category
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  Remaining funds terminated, grouped by the protected class referenced in the grant&apos;s description or DEI rationale.
+                </p>
+              </div>
+              <div className="flex shrink-0 items-center gap-1 rounded-lg border border-border/50 bg-muted/30 p-1">
+                <button
+                  onClick={() => setEpMode("combined")}
+                  className={`rounded-md px-3 py-1 text-xs font-medium transition-colors ${
+                    epMode === "combined"
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  Combined
+                </button>
+                <button
+                  onClick={() => setEpMode("original")}
+                  className={`rounded-md px-3 py-1 text-xs font-medium transition-colors ${
+                    epMode === "original"
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  Original (Exhibit 24)
+                </button>
+              </div>
+            </div>
             <div style={{ height: 400 }}>
               <Bar data={chart1Data} options={chart1Options} />
             </div>
@@ -390,7 +425,9 @@ export function Charts() {
               Total: {epTotalGrants.toLocaleString()} grants terminated | {formatDollars(epTotalFunds)} in terminated funds
             </p>
             <p className="mt-2 text-xs text-muted-foreground/70">
-              74 grants explicitly identified by plaintiffs in Exhibit 24. The remaining 1,403 grants are categorized as &quot;No EP claim.&quot;
+              {epMode === "combined"
+                ? "Combined view: 74 grants from Exhibit 24 + 337 additional grants classified by keyword analysis of descriptions and DEI rationales. This expanded classification was developed beyond what Exhibit 24 originally identified."
+                : "Original view: 74 grants explicitly identified by plaintiffs in Exhibit 24. The remaining 1,403 grants are categorized as \"No EP claim.\""}
             </p>
           </div>
 
@@ -452,9 +489,6 @@ export function Charts() {
               </CardContent>
             </Card>
 
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-2">
             {/* Card E: The Keyword Asymmetry */}
             <Card className="glass-card border-0">
               <CardHeader>
