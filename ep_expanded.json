@@ -1,0 +1,37 @@
+[
+  {
+    "category": "Race",
+    "grants": 32,
+    "remaining": 2142046
+  },
+  {
+    "category": "National Origin / Ethnicity",
+    "grants": 19,
+    "remaining": 1158072
+  },
+  {
+    "category": "Race-Tribal",
+    "grants": 15,
+    "remaining": 666218
+  },
+  {
+    "category": "Sexuality",
+    "grants": 3,
+    "remaining": 201560
+  },
+  {
+    "category": "Sex/Gender",
+    "grants": 4,
+    "remaining": 199986
+  },
+  {
+    "category": "Religion",
+    "grants": 1,
+    "remaining": 47522
+  },
+  {
+    "category": "No EP claim",
+    "grants": 1403,
+    "remaining": 144969839
+  }
+]
