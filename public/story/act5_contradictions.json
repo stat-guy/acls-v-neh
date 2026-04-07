@@ -1,0 +1,124 @@
+{
+  "contradictions": [
+    {
+      "witness": "Fox",
+      "claim": "Fox deferred to agency heads (McDonald/Wolfson) on all decisions and never terminated grants unilaterally",
+      "quote": "We mark our interpretation of grants and whether or not we think it adheres... and we present that back to the agency leads, who ultimately make the final decision.",
+      "claimCitation": "Fox Dep. 151:5-9",
+      "reality": "Exhibit 05: McDonald email states 'it\\'s your decision on whether to discontinue funding any of the projects on this list' - delegating termination authority to Fox",
+      "evidence": "Ex. 5",
+      "severity": "high",
+      "topic": "chain_of_command",
+      "explanation": "Fox claims McDonald/Chairman made termination decisions, but documentary evidence shows McDonald explicitly deferred to Fox, a DOGE contractor at GSA",
+      "potentialContradictions": "Exhibit 23 (McDonald email): 'We were getting ready to cancel them today but understanding that you will do so... As you instructed, we have only excluded the ones that seem not to conflict.' McDonald's language suggests Fox was instructing NEH, not the reverse. Exhibit 33 RFA 16: Government admits McDonald 'did not personally send out the emails containing the grant termination notices.'"
+    },
+    {
+      "witness": "Fox",
+      "claim": "Fox deferred to agency heads (McDonald/Wolfson) on all decisions and never terminated grants unilaterally",
+      "quote": "We mark our interpretation of grants and whether or not we think it adheres... and we present that back to the agency leads, who ultimately make the final decision.",
+      "claimCitation": "Fox Dep. 151:5-9",
+      "reality": "Exhibit 23: Email chain shows Fox driving termination process with McDonald/Wolfson in reactive role",
+      "evidence": "Ex. 23",
+      "severity": "high",
+      "topic": "chain_of_command",
+      "explanation": "Chain of command claims contradicted by email evidence showing Fox as primary decision-maker",
+      "potentialContradictions": "Exhibit 23 (McDonald email): 'We were getting ready to cancel them today but understanding that you will do so... As you instructed, we have only excluded the ones that seem not to conflict.' McDonald's language suggests Fox was instructing NEH, not the reverse. Exhibit 33 RFA 16: Government admits McDonald 'did not personally send out the emails containing the grant termination notices.'"
+    },
+    {
+      "witness": "Cavanaugh",
+      "claim": "Claimed it was 'well understood' that you were required to read the actual grant description before requesting termination",
+      "quote": "It was well understood by myself and my team, the small agencies team. And it was well understood among the DOGE team and culture, that you couldn't just randomly recommend to an agency head to terminate a grant or contract unless you thoroughly understood what it said and had a basis for doing so.",
+      "claimCitation": "Cavanaugh Dep. 0:13-11",
+      "reality": "Exhibit 31: ChatGPT output spreadsheet with 1,089 automated DEI classifications",
+      "evidence": "Ex. 31",
+      "severity": "high",
+      "topic": "methodology",
+      "explanation": "Cavanaugh's characterization of ChatGPT's role contradicted by the scale and nature of automated output",
+      "potentialContradictions": "Exhibit 11 (chatgpt_prompts.csv) shows grants were run through ChatGPT with a formulaic prompt rather than individually reviewed; Exhibit 31 (chatgpt_dei_output.csv) shows automated ChatGPT outputs were used for DEI determination; McDonald's April 1 email (page 179) states they didn't give N/A applications 'individualized consideration' due to time pressure from DOGE"
+    },
+    {
+      "witness": "Cavanaugh",
+      "claim": "Steve Davis explicitly said you should read every grant description before canceling",
+      "quote": "Q And he said explicitly you should read every grant before canceling? ... THE WITNESS: Yes. Yes. ... Grant description, contract, et cetera, yes.",
+      "claimCitation": "Cavanaugh Dep. 240:12-19",
+      "reality": "Exhibit 31: ChatGPT output spreadsheet with 1,089 automated DEI classifications",
+      "evidence": "Ex. 31",
+      "severity": "high",
+      "topic": "methodology",
+      "explanation": "Cavanaugh's characterization of ChatGPT's role contradicted by the scale and nature of automated output",
+      "potentialContradictions": "Exhibit 11 (chatgpt_prompts.csv) shows ChatGPT was used for bulk screening, inconsistent with individual review; Exhibit 10 (email_crazy_grants.md) shows Fox forwarded a spreadsheet titled 'Crazy grants' - suggesting casual, not rigorous, evaluation"
+    },
+    {
+      "witness": "Cavanaugh",
+      "claim": "Fox, Shaotran, and eventually Wood and Mendelson reported to Cavanaugh",
+      "quote": "Q And who reported to you? A Justin Fox, Ethan Shaotran. And then eventually Marshall Wood and Jonathan Mendelson.",
+      "claimCitation": "Cavanaugh Dep. 49:12-15",
+      "reality": "Exhibit 23: Email chain shows Fox making termination decisions with 'it's your decision' from McDonald",
+      "evidence": "Ex. 23",
+      "severity": "high",
+      "topic": "chain_of_command",
+      "explanation": "Cavanaugh's description of decision-making chain contradicted by documentary evidence of Fox's actual authority",
+      "potentialContradictions": ""
+    },
+    {
+      "witness": "Cavanaugh",
+      "claim": "DOGE did not have authority to individually cancel contracts; it was always at the discretion of the head of the agency",
+      "quote": "DOGE did not have the authority to individually cancel contracts. It was always at the discretion of the head of the agency.",
+      "claimCitation": "Cavanaugh Dep. 77:12-15",
+      "reality": "Exhibit 23: Email chain shows Fox making termination decisions with 'it's your decision' from McDonald",
+      "evidence": "Ex. 23",
+      "severity": "high",
+      "topic": "chain_of_command",
+      "explanation": "Cavanaugh's description of decision-making chain contradicted by documentary evidence of Fox's actual authority",
+      "potentialContradictions": "The pressure emails from Fox (Exhibit 5, deposition pages 169-172) suggest DOGE applied coercive pressure that undermined genuine agency discretion; Fox's email saying 'we will carry these plans out before the end of the week' and 'let us know if you're no longer interested' suggests a threat"
+    },
+    {
+      "witness": "Cavanaugh",
+      "claim": "Initial email to McDonald on March 12 sent all Biden-era grants (1,295 grants, $376M obligated, $322M remaining) with ~$25M flagged from meeting",
+      "quote": "[From Exhibit 27] Attached is a list of grants that were awarded during President Biden's administration (Jan 20, 2021 through Jan 19, 2025) at NEH... 1,295 grants, $376M obligated, $54M outlayed (spent), $322M remaining (can presumably be clawed back). I also flagged the ~$25M in grants that we referenced in our meeting in a separate tab.",
+      "claimCitation": "Cavanaugh Dep. 0:0-0",
+      "reality": "Exhibit 39: 1,420 grants flagged for cancellation including many with no DEI connection per staff annotations",
+      "evidence": "Ex. 39",
+      "severity": "high",
+      "topic": "expansion",
+      "explanation": "Cavanaugh's claims about scope contradicted by the breadth of terminations extending well beyond DEI-related grants",
+      "potentialContradictions": "Exhibit 27 shows the initial frame was ALL Biden-era grants (1,295 grants), not just DEI-related grants. Cavanaugh's deposition testimony frames the work as primarily DEI-focused with wasteful spending as secondary, but the first communication sent all Biden grants"
+    },
+    {
+      "witness": "Cavanaugh",
+      "claim": "Two driving primary criteria for termination: DEI and wasteful spending",
+      "quote": "Those were two of the driving primary criteria, yes.",
+      "claimCitation": "Cavanaugh Dep. 238:17-18",
+      "reality": "Exhibit 06: NEH staff annotations show many grants rated 'N/A' for DEI involvement were still terminated",
+      "evidence": "Ex. 6",
+      "severity": "high",
+      "topic": "decision_criteria",
+      "explanation": "Cavanaugh's claims about DEI-focused criteria contradicted by termination of grants staff found had no DEI connection",
+      "potentialContradictions": ""
+    },
+    {
+      "witness": "Cavanaugh",
+      "claim": "Two guiding principles: (1) executive orders re DEI, and (2) their own discretionary list of 'wasteful spending' that didn't align with America250 or Garden of Heroes",
+      "quote": "There were two guiding principles. One was through the lens of the executive orders that were signed with respect to DEI, preference, et cetera... The other was a list that we came up with, which, at our discretion, fell in the category of wasteful spending in the context of the broader deficit. And ones we felt did not align with the America250 initiative and the Garden of Heroes initiative.",
+      "claimCitation": "Cavanaugh Dep. 0:25-11",
+      "reality": "Exhibit 06: NEH staff annotations show many grants rated 'N/A' for DEI involvement were still terminated",
+      "evidence": "Ex. 6",
+      "severity": "high",
+      "topic": "decision_criteria",
+      "explanation": "Cavanaugh's claims about DEI-focused criteria contradicted by termination of grants staff found had no DEI connection",
+      "potentialContradictions": "Exhibit 27 shows initial focus was on all Biden-era grants, not specifically DEI or wasteful spending; Exhibit 4 shows the EO review criteria were more specifically defined than Cavanaugh's vague 'wasteful spending' standard"
+    },
+    {
+      "witness": "Cavanaugh",
+      "claim": "If a grant related to DEI, it could not be on the keep list",
+      "quote": "Q Just to make sure I understand your testimony, if a grant related to DEI, it couldn't be on the keep list, right? A That's correct.",
+      "claimCitation": "Cavanaugh Dep. 202:18-20",
+      "reality": "Exhibit 06: NEH staff annotations show many grants rated 'N/A' for DEI involvement were still terminated",
+      "evidence": "Ex. 6",
+      "severity": "high",
+      "topic": "decision_criteria",
+      "explanation": "Cavanaugh's claims about DEI-focused criteria contradicted by termination of grants staff found had no DEI connection",
+      "potentialContradictions": ""
+    }
+  ]
+}

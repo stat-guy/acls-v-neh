@@ -7,16 +7,19 @@ interface GalaxyGrant {
   id: string
   t: string
   r: string
-  p: number
-  a: number
+  c: number
   s: number
+  z: number
+  a: number
+  x: number
+  d: string
   ep: string
-  f: string
 }
 
 interface GalaxyData {
   grants: GalaxyGrant[]
-  programs: string[]
+  categories: string[]
+  spendLabels: string[]
 }
 
 function LoadingFallback() {
@@ -58,9 +61,10 @@ export function GrantGalaxy() {
           The Grant Galaxy
         </h2>
         <p className="mx-auto max-w-2xl text-sm text-muted-foreground sm:text-base">
-          Each particle represents one of 2,415 NEH grants. Red = terminated.
-          Green = kept. Watch the termination wave sweep across 22 days of
-          decisions.
+          2,415 NEH grants in 3D. Above the zero line: grants that survived.
+          Below: grants terminated. Color encodes funding impact — deep blue
+          marks the heaviest losses. Rotate to explore by program and spend
+          status.
         </p>
       </div>
 
@@ -68,28 +72,40 @@ export function GrantGalaxy() {
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border/50 px-4 py-3">
           <div className="flex flex-wrap gap-4 text-xs sm:text-sm">
             <span className="flex items-center gap-1.5">
-              <span className="inline-block h-2.5 w-2.5 rounded-full bg-red-500" />
-              Terminated
+              <span
+                className="inline-block h-2.5 w-2.5 rounded-full"
+                style={{ backgroundColor: "#1e3a8a" }}
+              />
+              Large loss
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="inline-block h-2.5 w-2.5 rounded-full bg-green-500" />
-              Kept
+              <span
+                className="inline-block h-2.5 w-2.5 rounded-full"
+                style={{ backgroundColor: "#0ea5e9" }}
+              />
+              Moderate loss
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="inline-block h-2.5 w-2.5 rounded-full bg-gray-500" />
-              Not reviewed
+              <span
+                className="inline-block h-2.5 w-2.5 rounded-full"
+                style={{ backgroundColor: "#22c55e" }}
+              />
+              Near zero / Kept
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span
+                className="inline-block h-2.5 w-2.5 rounded-full"
+                style={{ backgroundColor: "#eab308" }}
+              />
+              Kept (funded)
             </span>
           </div>
-          <Button
-            size="sm"
-            onClick={handlePlay}
-            disabled={!data || playing}
-          >
-            {playing ? "Playing..." : "Play Termination Wave"}
+          <Button size="sm" onClick={handlePlay} disabled={!data || playing}>
+            {playing ? "Playing..." : "Play Reveal Wave"}
           </Button>
         </div>
 
-        <div className="h-[400px] sm:h-[500px]">
+        <div className="h-[450px] sm:h-[550px]">
           {data ? (
             <Suspense fallback={<LoadingFallback />}>
               <Scene
@@ -102,6 +118,12 @@ export function GrantGalaxy() {
           ) : (
             <LoadingFallback />
           )}
+        </div>
+
+        <div className="border-t border-border/50 px-4 py-2.5 text-center text-xs text-muted-foreground">
+          <strong>X:</strong> Program Category &nbsp;|&nbsp; <strong>Y:</strong>{" "}
+          Spend Status &nbsp;|&nbsp; <strong>Z (height):</strong> Funding Impact
+          (+ kept, - terminated) &nbsp;|&nbsp; Drag to rotate, scroll to zoom
         </div>
       </div>
     </section>

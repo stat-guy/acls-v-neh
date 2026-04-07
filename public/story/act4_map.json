@@ -1,0 +1,856 @@
+{
+  "states": [
+    {
+      "id": "NY",
+      "name": "New York",
+      "lat": 43.3,
+      "lng": -74.22,
+      "count": 87,
+      "amount": 28626651.95,
+      "highlights": [
+        "How Beer Made Kings: The Abydos Brewery and the Emergence of Kingship in Ancient Egypt",
+        "Outpost of Empire: Kormantine, the slave trade, and England\u2019s first outpost in Africa",
+        "The Antefixa Project: Recovering Lost Craft Communities in Ancient Italy"
+      ]
+    },
+    {
+      "id": "CA",
+      "name": "California",
+      "lat": 36.78,
+      "lng": -119.42,
+      "count": 65,
+      "amount": 23132862.75,
+      "highlights": [
+        "Teotihuacan-Maya Ritual Economies: Excavations at Plaza of the Columns Complex, Teotihuacan",
+        "Soundscapes of the People: A Musical Ethnography of Pueblo, Colorado",
+        "Senegal Liberations Project: A Scholarly Digital Collaboration"
+      ]
+    },
+    {
+      "id": "TX",
+      "name": "Texas",
+      "lat": 31.97,
+      "lng": -99.9,
+      "count": 31,
+      "amount": 10507574.0,
+      "highlights": [
+        "Building Community, Fighting Exclusion: Black Cuban Oral History Project, 1959-present",
+        "Building an Equitable Arts Infrastructure",
+        "Entre Nosotras: Preserving Oral Histories of Migrant Farmworker Mothers"
+      ]
+    },
+    {
+      "id": "NC",
+      "name": "North Carolina",
+      "lat": 35.76,
+      "lng": -79.02,
+      "count": 30,
+      "amount": 12102713.68,
+      "highlights": [
+        "Replacement Instructor for Faculty on NEH Fellowship",
+        "Mysterious Manor Court Rolls-unlocking agricultural and health secrets through the DNA based analysis of parchment skins",
+        "The Value of Care: A Public Scholarly Exchange"
+      ]
+    },
+    {
+      "id": "VA",
+      "name": "Virginia",
+      "lat": 37.77,
+      "lng": -78.17,
+      "count": 30,
+      "amount": 8655781.0,
+      "highlights": [
+        "Hosting and Support for Democracy in the 19th Century Black Press of Ohio by Jewon Woo",
+        "Truth Telling About Collective Resilience with Diasporic Communities: Navigating Displacement, Erasure, and the Impacts of COVID-19",
+        "Digital Inequalities in Latin America: The effects of Code and Infrastructure in Indigenous Access to the Internet"
+      ]
+    },
+    {
+      "id": "PA",
+      "name": "Pennsylvania",
+      "lat": 41.2,
+      "lng": -77.19,
+      "count": 29,
+      "amount": 10207891.66,
+      "highlights": [
+        "Reimagining Jewish Life in the Modern Middle East, 1800-Present: Culture, Society, and History",
+        "Sovereign Kin: A History of the Cherokee Nation",
+        "Susan Shown Harjo Oral History Project"
+      ]
+    },
+    {
+      "id": "WI",
+      "name": "Wisconsin",
+      "lat": 43.78,
+      "lng": -88.79,
+      "count": 27,
+      "amount": 7246408.0,
+      "highlights": [
+        "Ordinary People: Poland's reception and integration of Ukrainian refugees",
+        "The Color of Farming in the Heartland: A History of Land, Race and Memory in Wisconsin Since 1820",
+        "Value, Self-Worth, and the Market in the Black Spanish Caribbean in the Age of Slavery"
+      ]
+    },
+    {
+      "id": "MI",
+      "name": "Michigan",
+      "lat": 44.31,
+      "lng": -84.64,
+      "count": 26,
+      "amount": 8558033.48,
+      "highlights": [
+        "Urbanism in Ancient Kush: Archaeological Investigation of Settlement at Jebel Barkal, Northern Sudan",
+        "Archiving Puerto Rico: Digital Memory and the Temporalities of Disaster",
+        "Aesthetics of Solidarity by Arab American and Arab Diaspora Artists in the US, 1948\u2013Present"
+      ]
+    },
+    {
+      "id": "IL",
+      "name": "Illinois",
+      "lat": 40.63,
+      "lng": -89.4,
+      "count": 26,
+      "amount": 11988550.21,
+      "highlights": [
+        "Steam Bath Ceremonialism and a New Vision of American Indian Urbanism",
+        "Building Climate Resilient Spaces for the Humanities: UIC\u2019s Jane Addams Hull- House Museum & Gallery 400 as Sites of Heritage Justice",
+        "The Global Cochlear Implant: Provincializing \"Brain Implants\" through Disability Technocultures"
+      ]
+    },
+    {
+      "id": "MA",
+      "name": "Massachusetts",
+      "lat": 42.41,
+      "lng": -71.38,
+      "count": 26,
+      "amount": 8960009.34,
+      "highlights": [
+        "Computational Methods for Historical Psychology: A case-study in Latin ca. 200 BCE - 1700 CE",
+        "Urban Repair: The Southwest Corridor and the Transformation of Boston, 1970-89",
+        "The Ethics of Conservation Biotechnology: A Conceptual Engineering Approach"
+      ]
+    },
+    {
+      "id": "AZ",
+      "name": "Arizona",
+      "lat": 34.05,
+      "lng": -111.09,
+      "count": 20,
+      "amount": 7636270.0,
+      "highlights": [
+        "The Materiality of Survivance at Indian Boarding Schools, Blackfeet Indian Reservation, Montana",
+        "Shared Churches in Early Modern Europe, 1500\u20131800",
+        "Unfinished Partitions in South Asia and the Making of Miyahs, Biharis, and Christians into Noncitizens (1947 - the Present)"
+      ]
+    },
+    {
+      "id": "FL",
+      "name": "Florida",
+      "lat": 27.66,
+      "lng": -81.52,
+      "count": 20,
+      "amount": 9315630.71,
+      "highlights": [
+        "Writing the First Indigenous History of Northeast Florida, 13,000 years ago to the Present",
+        "The Origins of Writing in Early Mesoamerica",
+        "Community Heritage Empowerment Toolkit (CHET): A Standards-Based Toolkit for Documenting a Structure\u2019s Life History for Grassroots Heritage Preservation Organizations"
+      ]
+    },
+    {
+      "id": "IN",
+      "name": "Indiana",
+      "lat": 40.27,
+      "lng": -86.13,
+      "count": 20,
+      "amount": 6886816.91,
+      "highlights": [
+        "Mapping London's Theater Districts, 1576-1642",
+        "The Aramaic Dead Sea Scrolls at the Crossroads of Empire: Negotiating Jewish Life Under Foreign Rule",
+        "Central Asians Remember 1991"
+      ]
+    },
+    {
+      "id": "GA",
+      "name": "Georgia",
+      "lat": 32.16,
+      "lng": -82.9,
+      "count": 17,
+      "amount": 8133186.0,
+      "highlights": [
+        "Building Gullah Geechee Resilience to Climate Change Through Spaces of Abundance in the Salt Marsh of Sapelo Island",
+        "Prosperity, Plants, and Pesticides: The Dangers and Opportunities of Agricultural Biotechnology",
+        "Sticky Activism: Online Misogyny and Feminist Activism in South Korea"
+      ]
+    },
+    {
+      "id": "TN",
+      "name": "Tennessee",
+      "lat": 35.52,
+      "lng": -86.58,
+      "count": 15,
+      "amount": 5204772.8,
+      "highlights": [
+        "Descendant-led Excavation at the Reconstruction-Era Black Civil War Veteran Community at Bass Street, Fort Negley Park",
+        "Building Resilience: Archaeological Landscapes, Climate Anomalies, and Risk Mitigation on the North Coast of Peru, 1100 BCE- present.",
+        "GeoPACHA 2.0: Large-Scale Archaeological Imagery Survey Through Human- Machine Teaming"
+      ]
+    },
+    {
+      "id": "HI",
+      "name": "Hawaii",
+      "lat": 19.9,
+      "lng": -155.58,
+      "count": 14,
+      "amount": 5656833.0,
+      "highlights": [
+        "Of Water, Crocodiles, and Kings: Co-producing Kuy history in the Prey Lang Forest, Cambodia",
+        "A Pattern of Islands: Ethnography, Remote Sensing, and Community Archaeology in Kosrae and Pohnpei, Micronesia",
+        "A Biography of Native Hawaiian Leader and Scholar, Haunani-Kay Trask (1949 - 2021)"
+      ]
+    },
+    {
+      "id": "NJ",
+      "name": "New Jersey",
+      "lat": 40.06,
+      "lng": -74.41,
+      "count": 14,
+      "amount": 6240605.0,
+      "highlights": [
+        "Design Justice Labs: An International and Interdisciplinary Digital Network for Community- Centered Research on the \u201cGenerative AI\u201d Modeling of Human Languages, Communication, Arts, and Cultures",
+        "Arts, Agency and Automation: A Global Cultural Affair",
+        "Increasing Access to and Developing Digital Tools for Early African Literature: The Princeton Ethiopian, Egyptian, and Eritrean Miracles of Mary Project"
+      ]
+    },
+    {
+      "id": "OR",
+      "name": "Oregon",
+      "lat": 43.8,
+      "lng": -120.55,
+      "count": 13,
+      "amount": 5675197.0,
+      "highlights": [
+        "Culturally Modified Trees in Traditional Landscapes: Documenting The Legacy of Indigenous Foods and Cultural Practices in the Oregon Cascades",
+        "Our Changing Climate: Cultural Resiliency in Oregon's High Desert",
+        "Geneticizing Health Disparities? Health Equity for Racialized Communities and the Promise of Precision Medicine in Canada"
+      ]
+    },
+    {
+      "id": "CT",
+      "name": "Connecticut",
+      "lat": 41.6,
+      "lng": -72.76,
+      "count": 11,
+      "amount": 4504764.0,
+      "highlights": [
+        "Bringing the Past to the Future: Slavery and Artificial Intelligence on the Battleground of Popular Culture",
+        "Leading with Humanities to Enhance Science Education: Developing Contextualized Science Curricula",
+        "Remote Collaboration Methods and Best Practices for Digital Humanities Scholarship"
+      ]
+    },
+    {
+      "id": "WA",
+      "name": "Washington",
+      "lat": 47.75,
+      "lng": -120.74,
+      "count": 11,
+      "amount": 6234616.0,
+      "highlights": [
+        "Robot Existentialism: Artificial Intelligence and the Limits of Rationality",
+        "Finding Our Way: Digital Deep Mapping to Foster a Sense of Place for Underrepresented Communities",
+        "The John Hoge Preservation and Digitization Project"
+      ]
+    },
+    {
+      "id": "MS",
+      "name": "Mississippi",
+      "lat": 32.35,
+      "lng": -89.4,
+      "count": 9,
+      "amount": 4021357.0,
+      "highlights": [
+        "An Investigation of the Mississippi Lunatic Asylum as History and Memory",
+        "NEH Collaborative: An Interdisciplinary Exploration of the Methods, Goals, and Ethics of Memorialization",
+        "Emancipation Summer: The Meaning of Freedom in Mississippi"
+      ]
+    },
+    {
+      "id": "OK",
+      "name": "Oklahoma",
+      "lat": 35.47,
+      "lng": -97.52,
+      "count": 9,
+      "amount": 5541603.0,
+      "highlights": [
+        "Vssvnochi Anumpuli (Elders Speak): The Past, Present and Future in Choctaw",
+        "Restoration and Early-Stage Documentation of Chiricahua-Mescalero Language (ISO 639-3: apm) Recordings",
+        "Creating Online Access for the Native American Languages Collection"
+      ]
+    },
+    {
+      "id": "UT",
+      "name": "Utah",
+      "lat": 39.32,
+      "lng": -111.09,
+      "count": 9,
+      "amount": 4289053.0,
+      "highlights": [
+        "From Jikji to Gutenberg: The Origins of Printing from Cast- Metal Type",
+        "Expanding Access to Visual Books through Metadata Enhancement",
+        "Wanlass Art Research & Education Center"
+      ]
+    },
+    {
+      "id": "DC",
+      "name": "District of Columbia",
+      "lat": 38.91,
+      "lng": -77.04,
+      "count": 8,
+      "amount": 1318867.0,
+      "highlights": [
+        "King County Library System Climate Action Plan Project",
+        "Safeguarding Governance: Integrating Historical Data on Political and Legal Institutions in Latin America into the \u201cSIGLA\u201d Multilingual Database",
+        "Implementing a Collaborative Medical Humanities Minor"
+      ]
+    },
+    {
+      "id": "PR",
+      "name": "Puerto Rico",
+      "lat": 18.22,
+      "lng": -66.59,
+      "count": 8,
+      "amount": 3636716.26,
+      "highlights": [
+        "The Island Resilience Project: Cultural Heritage and Community Empowerment in Islote, Puerto Rico",
+        "Collective Care: Oral Histories of Climate Change in Puerto Rico",
+        "Sitios: A Spatial Story of Puerto Rico's Modernization: Georeferencing the Works of Henry Klumb"
+      ]
+    },
+    {
+      "id": "RI",
+      "name": "Rhode Island",
+      "lat": 41.58,
+      "lng": -71.48,
+      "count": 8,
+      "amount": 3766615.03,
+      "highlights": [
+        "Stolen Relations: Recovering Stories of Indigenous Enslavement in the Americas",
+        "Edward Mitchell Bannister: An Artist and His Time",
+        "A New Model for Integrated Humanities and Engineering Education"
+      ]
+    },
+    {
+      "id": "KY",
+      "name": "Kentucky",
+      "lat": 37.84,
+      "lng": -84.27,
+      "count": 8,
+      "amount": 4824785.0,
+      "highlights": [
+        "DERBi PIE: a Database of Etymological Roots Beginning in Proto-Indo- European",
+        "The Digital Restoration Initiative: A Cultural Heritage Imaging and Analysis Lab",
+        "Kentucky Digital Newspaper Program"
+      ]
+    },
+    {
+      "id": "OH",
+      "name": "Ohio",
+      "lat": 40.42,
+      "lng": -82.91,
+      "count": 8,
+      "amount": 7875343.74,
+      "highlights": [
+        "Open access edition of Victorian Dogs, Victorian Men: Affect and Animals in Nineteenth-Century Literature and Culture by Keridiana Chez",
+        "The Part Issue Project: Making 19th-century Serial Temporality Discoverable and Accessible in HathiTrust",
+        "Pauline Trigere: Fifty years of American fashion entrepreneurship and design: Kent State University"
+      ]
+    },
+    {
+      "id": "VT",
+      "name": "Vermont",
+      "lat": 44.56,
+      "lng": -72.58,
+      "count": 7,
+      "amount": 3343261.58,
+      "highlights": [
+        "\u201cThe Floods Change Everything:\u201d Documenting Food Access and Cultural Resiliency Among New American Communities in Vermont",
+        "Perry Center for Native American Art at Shelburne Museum",
+        "Developing a Strategic Plan for Preserving the Contents of the Town of Norwich Vault"
+      ]
+    },
+    {
+      "id": "SC",
+      "name": "South Carolina",
+      "lat": 33.84,
+      "lng": -81.16,
+      "count": 7,
+      "amount": 4570125.0,
+      "highlights": [
+        "ClimateLore",
+        "Developing an Asynchronous Online MA in English",
+        "South Carolina Digital Newspaper Program"
+      ]
+    },
+    {
+      "id": "MN",
+      "name": "Minnesota",
+      "lat": 46.73,
+      "lng": -94.69,
+      "count": 7,
+      "amount": 4630298.65,
+      "highlights": [
+        "Examining Military Service from the Margins",
+        "Updating Seventeen Moments in Soviet History for Longevity, Accessibility and the Non-European Regions of the Former Soviet Union",
+        "Curricular-Bridge Courses Between Humanities and STEM"
+      ]
+    },
+    {
+      "id": "NH",
+      "name": "New Hampshire",
+      "lat": 43.19,
+      "lng": -71.57,
+      "count": 7,
+      "amount": 4399173.71,
+      "highlights": [
+        "The Archaeology of Indigenous Agricultural Landscapes: Digital Approaches to Documentation, Mapping, and Interpretation",
+        "Visualizing Oral Histories: New Data Annotation and Visualization Tools for the Oral History Metadata Synchronizer",
+        "Entangled Ecologies: Digital Storytelling in the Shaker Forest Landscape"
+      ]
+    },
+    {
+      "id": "MO",
+      "name": "Missouri",
+      "lat": 37.96,
+      "lng": -91.83,
+      "count": 7,
+      "amount": 4555681.14,
+      "highlights": [
+        "TPEN 3.0: A Linked Open Transcription and Annotation Service for the Next Generation",
+        "Immersive Digital History Trails: A New Platform for Place-Based Interpretation with Working Prototypes for the History of Jazz, Baseball, and BBQ in Kansas City",
+        "Humanities at Work Graduate Internships for the Next Generation"
+      ]
+    },
+    {
+      "id": "ME",
+      "name": "Maine",
+      "lat": 45.25,
+      "lng": -69.45,
+      "count": 7,
+      "amount": 4338395.38,
+      "highlights": [
+        "Franco American Digital Archives/Portail franco- am\u00e9ricain: Digitizing Franco- American History Collections for Open Access",
+        "Wabanaki Resources Portal",
+        "Creating a Permanent Home for Museum L-A in a Historic Mill on the Androscoggin Riverfront"
+      ]
+    },
+    {
+      "id": "NM",
+      "name": "New Mexico",
+      "lat": 34.52,
+      "lng": -105.87,
+      "count": 7,
+      "amount": 3125891.15,
+      "highlights": [
+        "Reimagining the U.S.- Mexico Border: Transcending Boundaries through Multimodal Storytelling",
+        "Rehousing Ethnographic Baskets at the Maxwell Museum Preservation",
+        "Centering Humanities Curriculum around Cultural Relevance at a Small, Rural, Hispanic-Serving Institution"
+      ]
+    },
+    {
+      "id": "AL",
+      "name": "Alabama",
+      "lat": 32.32,
+      "lng": -86.9,
+      "count": 6,
+      "amount": 3986282.0,
+      "highlights": [
+        "Notre Dame in Color: Interpreting the Layers of Polychromy on the Sculptures of the Cathedral of Paris Using 3D Modeling",
+        "Making the Digital Dance: Creating Access to Dance Archives Through Digital Tools and Infrastructure",
+        "Enhancing Access to Alabama's Black Political and Educational History"
+      ]
+    },
+    {
+      "id": "KS",
+      "name": "Kansas",
+      "lat": 39.01,
+      "lng": -98.48,
+      "count": 6,
+      "amount": 3570626.0,
+      "highlights": [
+        "Stories of Language, Communication, and the COVID-19 Pandemic in Kansas Latinx Communities",
+        "Empowering Accessible Digital Humanities through the Vizling Content Creator",
+        "Revisioning the Spencer Museum of Art\u2019s Collection Galleries"
+      ]
+    },
+    {
+      "id": "DE",
+      "name": "Delaware",
+      "lat": 38.91,
+      "lng": -75.53,
+      "count": 6,
+      "amount": 3440645.0,
+      "highlights": [
+        "Stabilizing and Disseminating the Center for Historic Architecture and Design's Archive of Vanishing Historic Architecture of the Mid- Atlantic",
+        "Mapping Resistance of Africans and African Descendants to Colonialism and Segregation, 1945-1990",
+        "State or Jurisdictional Humanities Program"
+      ]
+    },
+    {
+      "id": "NE",
+      "name": "Nebraska",
+      "lat": 41.49,
+      "lng": -99.9,
+      "count": 6,
+      "amount": 3701261.72,
+      "highlights": [
+        "The Natural Face of North America: A Public Portal to the Maximilian-Bodmer Collection at Joslyn Art Museum",
+        "The N\u012f\u012fkj\u0105k Xawan\u012f\u012f\u0148e (lost children) Project",
+        "Humanities and Health Justice Pathways: Forming First-Generation Professionals"
+      ]
+    },
+    {
+      "id": "WV",
+      "name": "West Virginia",
+      "lat": 38.6,
+      "lng": -80.95,
+      "count": 6,
+      "amount": 444901.0,
+      "highlights": [
+        "The Italian Diaspora Archive Map (IDARM) Project",
+        "Contemporary Asias: Pluralities Beyond Areas",
+        "Missing Stories: The LGBTQ+ Community in Boston's West End"
+      ]
+    },
+    {
+      "id": "MD",
+      "name": "Maryland",
+      "lat": 39.05,
+      "lng": -76.64,
+      "count": 5,
+      "amount": 3869314.63,
+      "highlights": [
+        "Idr\u012bs\u012b: An Open Library of Historical Geography of the Premodern Islamic World",
+        "Historic Maryland Newspapers Project, Phase 6",
+        "Connecting Indigenous Archives to Indigenous Communities: Advancing discoverability of Indigenous archival content through reparative aggregation and linked data"
+      ]
+    },
+    {
+      "id": "AK",
+      "name": "Alaska",
+      "lat": 63.59,
+      "lng": -154.49,
+      "count": 5,
+      "amount": 3212468.0,
+      "highlights": [
+        "Chickaloon Native Village We Are Making Connections",
+        "Immortalizing the Sitka Native Education Program",
+        "Mt. Edgecumbe High School Residential Boarding School Curriculum Articulation"
+      ]
+    },
+    {
+      "id": "GU",
+      "name": "Guam",
+      "lat": 13.44,
+      "lng": 144.79,
+      "count": 5,
+      "amount": 2007883.0,
+      "highlights": [
+        "Jurisdictional Humanities Program",
+        "State or Jurisdictional Humanities Program",
+        "NEH Pacific Islands Cultural Initiative"
+      ]
+    },
+    {
+      "id": "LA",
+      "name": "Louisiana",
+      "lat": 31.17,
+      "lng": -91.87,
+      "count": 4,
+      "amount": 3256613.0,
+      "highlights": [
+        "Exploring Artistic Production with the Artistic Network Toolbox (ANT)",
+        "A New Home for the Center for Louisiana Studies in the Historic J. Arthur Roy House",
+        "Bvlbancha Rising: Louisiana Landmarks and Climate Change Challenges"
+      ]
+    },
+    {
+      "id": "IA",
+      "name": "Iowa",
+      "lat": 41.88,
+      "lng": -93.1,
+      "count": 4,
+      "amount": 799618.0,
+      "highlights": [
+        "Mainstreet 360\u00b0: An Application for Georeferencing and Layering Historical Photos in a Digital Archive",
+        "The Ruth and Marvin Sackner Archive of Concrete and Visual Poetry at Iowa: Increasing Access to 20th Century Avant-garde",
+        "Global Book Cultures and the Student Laboratory: Undergraduate Education at the UI Center for the Book"
+      ]
+    },
+    {
+      "id": "AR",
+      "name": "Arkansas",
+      "lat": 35.2,
+      "lng": -91.83,
+      "count": 4,
+      "amount": 3110322.0,
+      "highlights": [
+        "Contextualizing the Struggle in the South: Place-Based Experiential Learning as a Path to Public Humanities",
+        "Arkansas Digital Newspaper Project, Cycle IV",
+        "Brut y Brenhinedd: Translating the Welsh Reception of Geoffrey of Monmouth"
+      ]
+    },
+    {
+      "id": "CO",
+      "name": "Colorado",
+      "lat": 39.55,
+      "lng": -105.78,
+      "count": 4,
+      "amount": 4149431.0,
+      "highlights": [
+        "Humanities in Practice: The Center for Engaged Humanities",
+        "Gregory Allicar Museum of Art Preservation Matting and Storage of Photographs",
+        "State or Jurisdictional Humanities Program"
+      ]
+    },
+    {
+      "id": "SD",
+      "name": "South Dakota",
+      "lat": 43.97,
+      "lng": -99.9,
+      "count": 3,
+      "amount": 2355552.0,
+      "highlights": [
+        "SubjectSpotter: Automation & Subject Tagging Historical Texts",
+        "State Humanities Program",
+        "National History Day supplements"
+      ]
+    },
+    {
+      "id": "WY",
+      "name": "Wyoming",
+      "lat": 43.08,
+      "lng": -107.29,
+      "count": 3,
+      "amount": 3344916.0,
+      "highlights": [
+        "Wyoming Digital Newspaper Project",
+        "Wyoming Humanities Program",
+        "Wyoming Humanities Program"
+      ]
+    },
+    {
+      "id": "ID",
+      "name": "Idaho",
+      "lat": 44.07,
+      "lng": -114.74,
+      "count": 3,
+      "amount": 3047571.0,
+      "highlights": [
+        "State or Jurisdictional Humanities Program",
+        "State or Jurisdictional Humanities Program",
+        ""
+      ]
+    },
+    {
+      "id": "MT",
+      "name": "Montana",
+      "lat": 46.88,
+      "lng": -110.36,
+      "count": 2,
+      "amount": 2358819.0,
+      "highlights": [
+        "A People's Oral History of Coal",
+        "State or Jurisdictional Humanities Program"
+      ]
+    },
+    {
+      "id": "NV",
+      "name": "Nevada",
+      "lat": 38.8,
+      "lng": -116.42,
+      "count": 2,
+      "amount": 2392420.0,
+      "highlights": [
+        "Nevada Cooperative Archives Discovery Portal Pilot Project",
+        "State or Jurisdictional Humanities Program"
+      ]
+    },
+    {
+      "id": "ND",
+      "name": "North Dakota",
+      "lat": 47.55,
+      "lng": -101.0,
+      "count": 1,
+      "amount": 2213085.0,
+      "highlights": [
+        "State Humanities Program"
+      ]
+    }
+  ],
+  "flyoverStops": [
+    {
+      "name": "Tribal Nations & Indigenous Communities",
+      "lat": 36.5,
+      "lng": -105.0,
+      "grants": [
+        {
+          "title": "Pride is Our Heritage II: Weaving Elders' Stories & Community Reconnection",
+          "recipient": "Port Gamble S'Klallam Tribe",
+          "amount": 133971.0
+        },
+        {
+          "title": "Family Conversations, Recording Our Western Mono Language (MNR)",
+          "recipient": "North Fork Rancheria of Mono",
+          "amount": 370731.0
+        },
+        {
+          "title": "Restoration and Early-Stage Documentation of Chiricahua-Mescalero Language (ISO 639-3: apm) Recordings",
+          "recipient": "Fort Sill Apache Tribe",
+          "amount": 425823.0
+        },
+        {
+          "title": "Chickaloon Native Village We Are Making Connections",
+          "recipient": "Chickaloon Native Village",
+          "amount": 339994.0
+        },
+        {
+          "title": "Immortalizing the Sitka Native Education Program",
+          "recipient": "Sitka Tribe of Alaska",
+          "amount": 30000.0
+        }
+      ],
+      "description": "11 grants to tribal nations and indigenous communities terminated"
+    },
+    {
+      "name": "Historically Black Colleges & Universities",
+      "lat": 33.75,
+      "lng": -84.39,
+      "grants": [
+        {
+          "title": "Replacement Instructor for Faculty on NEH Fellowship",
+          "recipient": "North Carolina Central Unive",
+          "amount": 18000.0
+        },
+        {
+          "title": "Instructor Replacement Support for Awards for Faculty Recipient Megan DeVirgilis",
+          "recipient": "Morgan State University",
+          "amount": 10000.0
+        },
+        {
+          "title": "Exploring the Dimension of Russia and Otherness",
+          "recipient": "Howard University",
+          "amount": 150000.0
+        },
+        {
+          "title": "Buried Blueprints of Black Education",
+          "recipient": "Morgan State University",
+          "amount": 150000.0
+        },
+        {
+          "title": "Creating a Team-Taught Interdisciplinary Course and Digital Library on Black Liberation in the USA and Caribbean",
+          "recipient": "Howard University",
+          "amount": 149986.0
+        }
+      ],
+      "description": "9 HBCU humanities grants terminated"
+    },
+    {
+      "name": "Hispanic-Serving Institutions",
+      "lat": 31.97,
+      "lng": -99.9,
+      "grants": [
+        {
+          "title": "Re-Centering Global Humanities in the Contemporary World",
+          "recipient": "CUNY Research Foundation,",
+          "amount": 150000.0
+        },
+        {
+          "title": "Students Archive the Bronx: Building Literacy for Multilingual Learners through Community History Projects",
+          "recipient": "CUNY Research Foundation,",
+          "amount": 150000.0
+        },
+        {
+          "title": "Lives in Translation: Lead Through Language",
+          "recipient": "Rutgers University, Newark",
+          "amount": 150000.0
+        },
+        {
+          "title": "Building Community and Belonging for Hispanic Students through the Humanities",
+          "recipient": "Research Foundation for the",
+          "amount": 150000.0
+        },
+        {
+          "title": "Puerto Rican History of Health Goes Digital",
+          "recipient": "University of Puerto Rico, Me",
+          "amount": 150000.0
+        }
+      ],
+      "description": "28 HSI humanities grants terminated"
+    },
+    {
+      "name": "Endangered Language Documentation",
+      "lat": 35.0,
+      "lng": -110.0,
+      "grants": [
+        {
+          "title": "Documenting Din\u00e9 and Lakota Ways of Communicating through Community-Driven, Collaborative Tribal Organization \u2014 University Partnerships",
+          "recipient": "Trustees of Indiana University",
+          "amount": 449877.0
+        },
+        {
+          "title": "Collaborative Research: Documenting connected speech in an endangered language",
+          "recipient": "Yale University",
+          "amount": 448551.0
+        },
+        {
+          "title": "Navajo Language Digital Resource Development with Elders and Veteran Language Teachers Training Student Interns",
+          "recipient": "Swarthmore College",
+          "amount": 442752.0
+        },
+        {
+          "title": "Family Conversations, Recording Our Western Mono Language (MNR)",
+          "recipient": "North Fork Rancheria of Mono",
+          "amount": 370731.0
+        },
+        {
+          "title": "Documenting Language and Environment",
+          "recipient": "Trustees of Indiana University",
+          "amount": 377135.0
+        }
+      ],
+      "description": "12 endangered language projects terminated"
+    },
+    {
+      "name": "State Humanities Councils",
+      "lat": 39.8,
+      "lng": -98.6,
+      "grants": [
+        {
+          "title": "State or Jurisdictional Humanities Program",
+          "recipient": "Missouri Humanities Council",
+          "amount": 2982918.0
+        },
+        {
+          "title": "State Humanities Program",
+          "recipient": "California Humanities",
+          "amount": 8633920.0
+        },
+        {
+          "title": "State or Jurisdictional Humanities Program",
+          "recipient": "Humanities Texas",
+          "amount": 6127525.0
+        },
+        {
+          "title": "State or Jurisdictional Humanities Program",
+          "recipient": "Utah Humanities Council",
+          "amount": 2415286.0
+        },
+        {
+          "title": "State Humanities Program",
+          "recipient": "Mississippi Humanities Coun",
+          "amount": 2531393.0
+        }
+      ],
+      "description": "100 state humanities council grants terminated ($182M+)"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "categories": [
+    {
+      "name": "State Humanities Councils",
+      "count": 108,
+      "amount": 187508534.0,
+      "icon": "states",
+      "description": "Operating support for state-level humanities councils serving all 50 states and territories",
+      "examples": [
+        "State or Jurisdictional Humanities Program",
+        "State Humanities Program",
+        "State or Jurisdictional Humanities Program"
+      ]
+    },
+    {
+      "name": "Preservation & Archives",
+      "count": 247,
+      "amount": 50830558.96,
+      "icon": "archive",
+      "description": "Safeguarding historical documents, newspapers, and cultural collections for future generations",
+      "examples": [
+        "Oglala Lakota College Lakota Language Interview Cataloging and Digitization",
+        "Restoration of Lahaina Jodo Mission's Large Bronze Temple Bell",
+        "Roswell Museum Post Flood Collections Care and Preservation"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "count": 87,
+      "amount": 40892671.75,
+      "icon": "infrastructure",
+      "description": "Capital projects and capacity building for humanities institutions",
+      "examples": [
+        "Mobilization of Collection through Storage Assessment",
+        "Humanities Center: Astoria Oregon Public Library Renovation",
+        "A New Humanities Hub at Miami University"
+      ]
+    },
+    {
+      "name": "Research & Scholarships",
+      "count": 199,
+      "amount": 37223957.87,
+      "icon": "research",
+      "description": "Scholarly research, fellowships, and collaborative academic projects advancing humanities knowledge",
+      "examples": [
+        "Urbanism in Ancient Kush: Archaeological Investigation of Settlement at Jebel Barkal, Northern Sudan",
+        "Feeding our Ancestors: An Ethnography of Black Seaweed Use in Southeast Alaska Indigenous Communities",
+        "How Ethnography Reveals the Human Story of Unusual Geological Encounters: Lessons from Puerto Rico"
+      ]
+    },
+    {
+      "name": "Public Programs & Media",
+      "count": 134,
+      "amount": 32811784.17,
+      "icon": "media",
+      "description": "Documentaries, exhibitions, and public programs bringing humanities to broad audiences",
+      "examples": [
+        "Implementation Phase of the Educating for American Democracy Initiative: Pilot Projects in Elementary",
+        "National Center for Civil and Human Rights\u2019 Juneteenth Commemoration in Atlanta",
+        "DuSable Museum Juneteenth Celebration 2025"
+      ]
+    },
+    {
+      "name": "Education",
+      "count": 183,
+      "amount": 28389383.38,
+      "icon": "education",
+      "description": "Humanities education programs from K-12 through graduate school, including faculty development",
+      "examples": [
+        "A More Perfect Union: America at 250 Cooperative Agreement Proposal 2023\u20132026",
+        "The \"Cornerstone\" Approach to Reinvigorating General Education",
+        "Moving Freedom Forward: Teaching a More Inclusive History"
+      ]
+    },
+    {
+      "name": "Digital Humanities",
+      "count": 99,
+      "amount": 20243863.93,
+      "icon": "digital",
+      "description": "Innovative digital tools and platforms for humanities research and public engagement",
+      "examples": [
+        "From Lima to Canton and Beyond: An AI-aided heritage materials research platform for studying globalisation through art",
+        "Piloting a Digital Humanities Research Software Consulting Unit (DHReSCU)",
+        "Refinement and Scaling of the Digital Archive of Indigenous Language Persistence Translation Interface (DAILP TI)"
+      ]
+    },
+    {
+      "name": "Community & Cultural",
+      "count": 61,
+      "amount": 9436756.56,
+      "icon": "community",
+      "description": "Community-based cultural preservation and resilience programs",
+      "examples": [
+        "Producing a Comprehensive Climate Smart Mitigation and Adaptation Plan (MAP) at the Toledo Museum of Art",
+        "Save Jamestown: Developing a Climate Resiliency Plan for Historic Jamestowne",
+        "Caretakers of Wonder Consortium Climate Action Planning"
+      ]
+    },
+    {
+      "name": "Other & Cooperative Programs",
+      "count": 315,
+      "amount": 6775542.33,
+      "icon": "other",
+      "description": "Cooperative agreements, special projects, and other humanities programs",
+      "examples": []
+    },
+    {
+      "name": "Identity-Named Programs",
+      "count": 32,
+      "amount": 4404689.7,
+      "icon": "identity",
+      "description": "Programs specifically supporting HBCUs, Hispanic-Serving Institutions, and Tribal Colleges",
+      "examples": [
+        "Replacement Instructor for Faculty on NEH Fellowship",
+        "Instructor Replacement Support for Awards for Faculty Recipient Megan DeVirgilis",
+        "Re-Centering Global Humanities in the Contemporary World"
+      ]
+    },
+    {
+      "name": "Endangered Languages",
+      "count": 12,
+      "amount": 4193680.0,
+      "icon": "languages",
+      "description": "Documentation of languages spoken by fewer than 1,000 people, preserving irreplaceable cultural knowledge",
+      "examples": [
+        "Documenting Din\u00e9 and Lakota Ways of Communicating through Community-Driven, Collaborative Tribal Organization \u2014 University Partnerships",
+        "Collaborative Research: Documenting connected speech in an endangered language",
+        "Navajo Language Digital Resource Development with Elders and Veteran Language Teachers Training Student Interns"
+      ]
+    }
+  ],
+  "totalAmount": 422711422.65,
+  "totalCount": 1477
+}
