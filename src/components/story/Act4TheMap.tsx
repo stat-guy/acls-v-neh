@@ -32,7 +32,6 @@ interface MapData {
 /*  Lazy-load both map implementations                                 */
 /* ------------------------------------------------------------------ */
 
-const DotMap = lazy(() => import("./maps/DotMapVersion"))
 const AerialMap = lazy(() => import("./maps/AerialMapVersion"))
 
 /* ------------------------------------------------------------------ */
@@ -152,15 +151,8 @@ const steps: ScrollyStep[] = [
   },
 ]
 
-/* ------------------------------------------------------------------ */
-/*  Map toggle                                                         */
-/* ------------------------------------------------------------------ */
-
-type MapVersion = "dot" | "aerial"
-
 export function Act4TheMap() {
   const [data, setData] = useState<MapData | null>(null)
-  const [version, setVersion] = useState<MapVersion>("dot")
 
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + "story/act4_map.json")
@@ -186,30 +178,6 @@ export function Act4TheMap() {
         <h2 className="mt-4 text-3xl font-bold sm:text-5xl">
           Across the Nation
         </h2>
-
-        {/* Map version toggle */}
-        <div className="mt-6 flex items-center justify-center gap-2">
-          <button
-            className={`rounded-full px-4 py-1.5 text-xs font-medium transition-colors ${
-              version === "dot"
-                ? "bg-white text-black"
-                : "bg-gray-800 text-gray-400 hover:text-white"
-            }`}
-            onClick={() => setVersion("dot")}
-          >
-            Dot Map
-          </button>
-          <button
-            className={`rounded-full px-4 py-1.5 text-xs font-medium transition-colors ${
-              version === "aerial"
-                ? "bg-white text-black"
-                : "bg-gray-800 text-gray-400 hover:text-white"
-            }`}
-            onClick={() => setVersion("aerial")}
-          >
-            Aerial View
-          </button>
-        </div>
       </div>
 
       <ScrollySection
@@ -222,11 +190,7 @@ export function Act4TheMap() {
               </div>
             }
           >
-            {version === "dot" ? (
-              <DotMap data={data} activeStep={activeStep} />
-            ) : (
-              <AerialMap data={data} activeStep={activeStep} />
-            )}
+            <AerialMap data={data} activeStep={activeStep} />
           </Suspense>
         )}
         visualPosition="background"
