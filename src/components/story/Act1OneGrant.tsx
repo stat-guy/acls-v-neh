@@ -41,6 +41,8 @@ export function Act1OneGrant() {
     triggerOnce: true,
   })
 
+  const imgBase = import.meta.env.BASE_URL + "story/images/"
+
   return (
     <section className="relative min-h-[200vh] px-4 py-32">
       {/* Background texture */}
@@ -60,7 +62,24 @@ export function Act1OneGrant() {
           </h2>
         </FadeIn>
 
-        <div className="mt-20" />
+        {/* Apache Prisoners of War photo */}
+        <FadeIn delay={0.3} className="mt-12">
+          <div className="relative overflow-hidden rounded-2xl">
+            <img
+              src={imgBase + "apache-pow.png"}
+              alt="Apache Prisoners of War at Fort Sill — the people whose language recordings this grant aimed to preserve"
+              className="w-full object-cover"
+              style={{ maxHeight: "400px" }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+            <p className="absolute bottom-4 left-4 right-4 text-xs text-gray-400 italic">
+              Apache Prisoners of War at Fort Sill — the people whose language
+              recordings this grant aimed to preserve
+            </p>
+          </div>
+        </FadeIn>
+
+        <div className="mt-12" />
 
         <FadeIn delay={0.1}>
           <div className="rounded-2xl border border-gray-800 bg-gray-950/80 p-8 backdrop-blur sm:p-12">

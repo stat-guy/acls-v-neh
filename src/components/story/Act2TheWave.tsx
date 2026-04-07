@@ -270,6 +270,38 @@ const steps: ScrollyStep[] = [
           abandoned mid-excavation. Community newspapers lost to history.
           Scholarly editions left unfinished.
         </p>
+        <div className="mt-4 grid grid-cols-3 gap-2">
+          <div className="overflow-hidden rounded-lg">
+            <img
+              src={import.meta.env.BASE_URL + "story/images/apache-pow.png"}
+              alt="Apache Prisoners of War"
+              className="h-20 w-full object-cover opacity-70"
+            />
+            <p className="mt-1 text-[10px] text-gray-500">
+              Apache language preservation
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-lg">
+            <img
+              src={import.meta.env.BASE_URL + "story/images/howard-students.png"}
+              alt="Howard University students"
+              className="h-20 w-full object-cover opacity-70"
+            />
+            <p className="mt-1 text-[10px] text-gray-500">
+              HBCU humanities programs
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-lg">
+            <img
+              src={import.meta.env.BASE_URL + "story/images/central-asians-1991.png"}
+              alt="Central Asians in 1991"
+              className="h-20 w-full object-cover opacity-70"
+            />
+            <p className="mt-1 text-[10px] text-gray-500">
+              Central Asian oral histories
+            </p>
+          </div>
+        </div>
       </div>
     ),
   },

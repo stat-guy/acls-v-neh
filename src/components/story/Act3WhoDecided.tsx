@@ -10,7 +10,10 @@ interface ChainActor {
   role: string
   org: "doge" | "neh" | "whitehouse"
   detail: string
+  image?: string
 }
+
+const IMG = "story/images/"
 
 const LAYERS: { level: string; actors: ChainActor[] }[] = [
   {
@@ -21,6 +24,7 @@ const LAYERS: { level: string; actors: ChainActor[] }[] = [
         role: "Presidential Directive",
         org: "whitehouse",
         detail: "EO on DEI directed agencies to eliminate DEI programs",
+        image: IMG + "trump-eo.png",
       },
     ],
   },
@@ -32,12 +36,14 @@ const LAYERS: { level: string; actors: ChainActor[] }[] = [
         role: "DOGE Team Lead at NEH",
         org: "doge",
         detail: "25-year-old operative with no humanities background. Reviewed all 2,415 grants in days.",
+        image: IMG + "fox-deposition.png",
       },
       {
         name: "Nate Cavanaugh",
         role: "DOGE Support",
         org: "doge",
         detail: "Assisted Fox with the grant review process and ChatGPT screening.",
+        image: IMG + "cavanaugh-deposition.png",
       },
     ],
   },
@@ -49,12 +55,14 @@ const LAYERS: { level: string; actors: ChainActor[] }[] = [
         role: "Senior Deputy Chairman",
         org: "neh",
         detail: "Political appointee who oversaw compliance with DOGE directives.",
+        image: IMG + "wolfson-deposition.png",
       },
       {
         name: "Michael McDonald",
         role: "Deputy Chairman",
         org: "neh",
         detail: "Career official involved in 26 documented actions during the termination period.",
+        image: IMG + "mcdonald-deposition.png",
       },
     ],
   },
@@ -151,16 +159,28 @@ function ChainVisual({ activeStep }: { activeStep: string | null }) {
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
                   {layer.level}
                 </p>
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {layer.actors.map((actor) => (
                     <div key={actor.name} className="flex items-start gap-3">
-                      <div
-                        className="mt-1 h-3 w-3 flex-shrink-0 rounded-full"
-                        style={{
-                          backgroundColor: ORG_COLORS[actor.org],
-                          opacity: isRevealed ? 1 : 0.3,
-                        }}
-                      />
+                      {actor.image ? (
+                        <img
+                          src={import.meta.env.BASE_URL + actor.image}
+                          alt={actor.name}
+                          className="mt-0.5 h-10 w-10 flex-shrink-0 rounded-full object-cover border-2"
+                          style={{
+                            borderColor: ORG_COLORS[actor.org],
+                            opacity: isRevealed ? 1 : 0.3,
+                          }}
+                        />
+                      ) : (
+                        <div
+                          className="mt-1 h-3 w-3 flex-shrink-0 rounded-full"
+                          style={{
+                            backgroundColor: ORG_COLORS[actor.org],
+                            opacity: isRevealed ? 1 : 0.3,
+                          }}
+                        />
+                      )}
                       <div>
                         <p className="text-sm font-bold text-white">
                           {actor.name}

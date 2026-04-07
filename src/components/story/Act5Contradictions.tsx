@@ -102,8 +102,19 @@ function ContradictionVisual({ activeStep }: { activeStep: string | null }) {
           transition={{ duration: 0.5 }}
           className="w-full max-w-2xl space-y-6"
         >
-          {/* Topic header */}
-          <div className="text-center">
+          {/* Topic header with photo */}
+          <div className="flex items-center justify-center gap-3">
+            <img
+              src={
+                import.meta.env.BASE_URL +
+                "story/images/" +
+                (item.witness === "Justin Fox"
+                  ? "fox-deposition.png"
+                  : "cavanaugh-deposition.png")
+              }
+              alt={item.witness}
+              className="h-10 w-10 rounded-full object-cover border-2 border-gray-600"
+            />
             <p className="text-xs font-semibold uppercase tracking-widest text-gray-500">
               {item.witness} &middot; {item.topic}
             </p>

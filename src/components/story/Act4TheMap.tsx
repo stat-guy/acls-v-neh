@@ -60,7 +60,12 @@ const steps: ScrollyStep[] = [
         <p className="text-lg font-bold text-amber-400">
           Tribal Nations & Indigenous Communities
         </p>
-        <p className="mt-2 text-gray-300">
+        <img
+          src={import.meta.env.BASE_URL + "story/images/apache-pow.png"}
+          alt="Apache Prisoners of War at Fort Sill"
+          className="mt-3 h-32 w-full rounded-lg object-cover opacity-80"
+        />
+        <p className="mt-3 text-gray-300">
           Language preservation projects at the Fort Sill Apache Tribe.
           Community heritage programs at the Port Gamble S&apos;Klallam Tribe.
           Cultural resilience grants at Tribal Colleges across the Southwest.
@@ -76,7 +81,12 @@ const steps: ScrollyStep[] = [
         <p className="text-lg font-bold text-blue-400">
           HBCUs & Minority-Serving Institutions
         </p>
-        <p className="mt-2 text-gray-300">
+        <img
+          src={import.meta.env.BASE_URL + "story/images/howard-students.png"}
+          alt="Howard University students"
+          className="mt-3 h-32 w-full rounded-lg object-cover opacity-80"
+        />
+        <p className="mt-3 text-gray-300">
           Programs at Historically Black Colleges, Hispanic-Serving
           Institutions, and Tribal Colleges — many receiving their first federal
           humanities funding — saw grants terminated at higher rates than
