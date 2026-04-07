@@ -1,0 +1,155 @@
+{
+  "totalTerminated": 1477,
+  "totalKept": 938,
+  "totalGrants": 2415,
+  "totalFundingLost": 422711422.65,
+  "timeline": [
+    {
+      "date": "2025-01-20",
+      "event": "Executive Orders signed: E.O. 14151 (Ending DEI Programs), E.O. 14168 (Defending Women from Gender Ideology)",
+      "actor": "President Trump",
+      "type": "executive_order",
+      "exhibit": 38
+    },
+    {
+      "date": "2025-01-27",
+      "event": "OMB Memo M-25-13 issued directing agencies to identify grants promoting 'Marxist equity, transgenderism, or green new deal social engineering policies'",
+      "actor": "OMB",
+      "type": "policy",
+      "exhibit": 4
+    },
+    {
+      "date": "2025-01-29",
+      "event": "E.O. 14190 signed - Ending Radical Indoctrination in K-12 Schooling",
+      "actor": "President Trump",
+      "type": "executive_order",
+      "exhibit": 38
+    },
+    {
+      "date": "2025-02-07",
+      "event": "Distributes NEH-Awards-2025 Data Call.xlsx to Division Directors with DEI review criteria (environmental justice, DEI/DEIA, gender ideology); instructs review of all awards 2021-present",
+      "actor": "Brett Bobley (NEH CIO)",
+      "type": "email",
+      "exhibit": 4
+    },
+    {
+      "date": "2025-02-19",
+      "event": "E.O. 14217 signed - Commencing the Reduction of the Federal Bureaucracy (primary legal basis cited in all termination notices)",
+      "actor": "President Trump",
+      "type": "executive_order",
+      "exhibit": 20
+    },
+    {
+      "date": "2025-03-12",
+      "event": "Sends McDonald list of 1,295 Biden-era grants ($376M obligated, $322M remaining 'can presumably be clawed back'); separately flagged ~$25M from prior meeting",
+      "actor": "Nate Cavanaugh (DOGE/GSA)",
+      "type": "email",
+      "exhibit": 27
+    },
+    {
+      "date": "2025-03-13",
+      "event": "Shares Brett Bobley's review spreadsheet link with DOGE team (Cavanaugh, Fox); describes rating methodology (high/medium/low/N/A for DEI categories); plans to finalize for OMB on Monday",
+      "actor": "Adam Wolfson (NEH)",
+      "type": "policy",
+      "exhibit": 8
+    },
+    {
+      "date": "2025-03-17",
+      "event": "Sends comprehensive review package to McDonald/Wolfson at 1:40 AM: grants (89-page PDF + Excel), employee census with proposed RIFs, contracts for descoping/termination; proposes reducing State partnerships from 43% to 20%",
+      "actor": "Justin Fox (DOGE/GSA)",
+      "type": "termination",
+      "exhibit": 30
+    },
+    {
+      "date": "2025-03-19",
+      "event": "Sends McDonald/Wolfson three attachments showing DOGE independently flagged N/A grants for DEI involvement (overriding NEH staff assessments); references upcoming Board meeting",
+      "actor": "Justin Fox (DOGE/GSA)",
+      "type": "email",
+      "exhibit": 13
+    },
+    {
+      "date": "2025-03-21",
+      "event": "Council meeting held (referenced in Exhibit 29 talking points)",
+      "actor": "National Council on the Humanities",
+      "type": "decision",
+      "exhibit": 29
+    },
+    {
+      "date": "2025-03-28",
+      "event": "Sends ~440 active N/A grants to McDonald/Wolfson for review; attaches proposed RIF plan; requests admin access to Microsoft systems",
+      "actor": "Justin Fox (DOGE/GSA)",
+      "type": "email",
+      "exhibit": 15
+    },
+    {
+      "date": "2025-03-30",
+      "event": "Responds to Fox's Microsoft access request on Sunday; questions whether it meant Outlook access to monitor employee logins",
+      "actor": "Michael McDonald (NEH Acting Chairman)",
+      "type": "decision",
+      "exhibit": 15
+    },
+    {
+      "date": "2025-03-31",
+      "event": "Fox sends three escalating emails (11:35 AM, 12:29 PM, 12:52 PM) demanding game plan for RIFs and terminations 'by tomorrow AM'; threatens McDonald ('remain on our side'); McDonald sends reviewed N/A grants at 4:28 PM confirming DOGE will execute cancellations ('we understand that you will cancel this list')",
+      "actor": "Justin Fox (DOGE/GSA), Michael McDonald (NEH)",
+      "type": "termination",
+      "exhibit": 15
+    },
+    {
+      "date": "2025-04-01",
+      "event": "Intensive all-day termination approval process: McDonald sends N/A spreadsheet at 10:07 AM ('it's your decision'); Fox sends grant lists and termination letter drafts throughout day; McDonald returns initialed review at 5:05 PM; McDonald approves attachments at 8:06 PM; Fox sends draft termination letter at 10:26 PM citing EO 14217; termination notice template dated this day",
+      "actor": "Michael McDonald (NEH), Justin Fox (DOGE/GSA)",
+      "type": "termination",
+      "exhibit": 5
+    },
+    {
+      "date": "2025-04-02",
+      "event": "McDonald approves termination letter language at 3:15 PM; Fox and Cavanaugh email termination notices to grantees overnight; ACLS (Emily Carroll) receives termination at 11:35 PM; ACLS grant CHC30455325 terminated; DOGE instructed NEH to consider eliminating up to 95% of workforce",
+      "actor": "Justin Fox (DOGE/GSA), Nate Cavanaugh (DOGE/GSA), Michael McDonald (NEH)",
+      "type": "termination",
+      "exhibit": 23
+    },
+    {
+      "date": "2025-04-03",
+      "event": "Fox confirms 1,208 of 1,220 organizational grants terminated overnight at 5:59 AM; 12 undeliverable; individual grant terminations begin (Exhibit 38 - Kadetsky); Fox emails himself 'Crazy grants' spreadsheet at 12:09 PM; McDonald holds staff meeting acknowledging terminations",
+      "actor": "Justin Fox (DOGE/GSA), Michael McDonald (NEH)",
+      "type": "termination",
+      "exhibit": 10
+    },
+    {
+      "date": "2025-04-04",
+      "event": "IMLS lawsuit announced (referenced in Exhibit 29 talking points)",
+      "actor": "20+ State Attorneys General",
+      "type": "decision",
+      "exhibit": 29
+    },
+    {
+      "date": "2025-04-08",
+      "event": "Informs JUSFC that five NEH-JUSFC fellowships terminated by DOGE (per McDonald); unable to reinstate; expresses personal disappointment; states 'this was not an agency decision'",
+      "actor": "Christopher Thornton (NEH)",
+      "type": "termination",
+      "exhibit": 19
+    },
+    {
+      "date": "2025-04-09",
+      "event": "Informs Dartmouth that DOGE cancelled award HAA-300911 ($349,812); confirms 'NEH staff didn't realize it was happening' and 'DOGE directly emailed nearly every active NEH grantee'",
+      "actor": "Brett Bobley (NEH CIO)",
+      "type": "email",
+      "exhibit": 18
+    },
+    {
+      "date": "2025-04-11",
+      "event": "Presents talking points to National Council on the Humanities; confirms ~1,400 grants terminated at WH/DOGE direction; workforce cut from 183 to ~50; 35+ programs reduced to under a dozen",
+      "actor": "Michael McDonald (NEH Acting Chairman)",
+      "type": "termination",
+      "exhibit": 29
+    },
+    {
+      "date": "2025-04-13",
+      "event": "Text message acknowledging 'DOGE cut grants having nothing to do with DEI' as part of 'government wide effort to claw back money'",
+      "actor": "Michael McDonald (NEH Acting Chairman)",
+      "type": "decision",
+      "exhibit": 34
+    }
+  ]
+}

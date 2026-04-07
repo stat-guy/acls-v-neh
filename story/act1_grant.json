@@ -1,0 +1,49 @@
+{
+  "primary": {
+    "id": "PD28743922",
+    "title": "Restoration and Early-Stage Documentation of Chiricahua-Mescalero Language (ISO 639-3: apm) Recordings",
+    "recipient": "Fort Sill Apache Tribe",
+    "description": "The restoration of archival digital recordings documenting the sound heritage of the Apache prisoners of war who were seized with Geronimo in 1886 and the transcription, translation, and linguistic analysis of the Chihene Apache dialect preserved in these recordings.",
+    "program": "Documenting Endangered Languages - Preservation",
+    "amount": 425823.0,
+    "startDate": "7/1/2022"
+  },
+  "others": [
+    {
+      "id": "PD29615323",
+      "title": "Navajo Language Digital Resource Development with Elders and Veteran Language Teachers Training Student Interns",
+      "recipient": "Swarthmore College",
+      "description": "The creation of accessible online language tools for understanding and teaching Navajo grammar, developed over the course of three summers at the Navajo Language Academy (Din\u00e9 Bizaad Naalkaah) field school.",
+      "program": "Documenting Endangered Languages - Preservation",
+      "amount": 442752.0,
+      "startDate": "10/1/2023"
+    },
+    {
+      "id": "PD27135520",
+      "title": "Mississippi Choctaw Dictionary and Comparison of Community Dialects",
+      "recipient": "Mississippi Band of Choctaw",
+      "description": "The documentation of Choctaw, a Western Muskogean language spoken primarily in east-central Mississippi by approximately 6,000 people and in southeast Oklahoma by fewer than 500 people. The applicant would produce a dictionary in print and electronic formats, as well as a collection of recorded interviews of speakers representing different generations and community dialects that would be partially transcribed/translated. All materials would be archived in the MCBI tribal archives and at the American Philosophical Society.",
+      "program": "Documenting Endangered Languages - Preservation",
+      "amount": 393363.0,
+      "startDate": "6/1/2020"
+    },
+    {
+      "id": "CHA26884421",
+      "title": "Preservation and Digitization of the New York Public Radio Archives",
+      "recipient": "New York Public Radio",
+      "description": "The preservation of a portion of the New York Public Radio\u2019s historical sound recordings and the implementation of a Digital Asset Management system for the NYPR Archives.",
+      "program": "Infrastructure and Capacity Building Challenge Grants",
+      "amount": 750000.0,
+      "startDate": "5/1/2020"
+    },
+    {
+      "id": "HAA30401525",
+      "title": "Expanding cyberSW: From Archaeological Research to Cultural Revitalization",
+      "recipient": "Archaeology Southwest",
+      "description": "The enhancement of the cyberSW archaeology platform by including Indigenous cultural and language content relating to plant and animal Cultural Keystone Species and a redesign of the platform to make it more user-friendly, including on mobile devices.",
+      "program": "Digital Humanities Advancement Grants",
+      "amount": 449980.0,
+      "startDate": "2/1/2025"
+    }
+  ]
+}

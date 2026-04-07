@@ -1,0 +1,167 @@
+{
+  "layers": [
+    {
+      "level": "White House",
+      "actors": [
+        {
+          "name": "President Trump",
+          "role": "President",
+          "organization": "White House"
+        }
+      ]
+    },
+    {
+      "level": "DOGE",
+      "actors": [
+        {
+          "name": "Justin Fox",
+          "role": "DOGE team member assigned to NEH (associated with DOGE per Exhibit 33 RFA 1)",
+          "organization": "DOGE/GSA"
+        },
+        {
+          "name": "Nate Cavanaugh",
+          "role": "DOGE team member assigned to NEH (associated with DOGE per Exhibit 33 RFA 1)",
+          "organization": "DOGE/GSA"
+        }
+      ]
+    },
+    {
+      "level": "NEH Leadership",
+      "actors": [
+        {
+          "name": "Michael McDonald",
+          "role": "Acting Chairman, National Endowment for the Humanities",
+          "organization": "NEH"
+        },
+        {
+          "name": "Adam Wolfson",
+          "role": "NEH official (co-reviewer with McDonald)",
+          "organization": "NEH"
+        }
+      ]
+    },
+    {
+      "level": "NEH Staff",
+      "actors": [
+        {
+          "name": "Christopher Thornton",
+          "role": "Director, Division of Research Programs",
+          "organization": "NEH"
+        },
+        {
+          "name": "Claudia Kinkela",
+          "role": "NEH staff",
+          "organization": "NEH"
+        },
+        {
+          "name": "Daniel Sack",
+          "role": "NEH staff",
+          "organization": "NEH"
+        },
+        {
+          "name": "Mark Silver",
+          "role": "NEH staff",
+          "organization": "NEH"
+        },
+        {
+          "name": "Cecily Dennis",
+          "role": "NEH Director of Acquisitions",
+          "organization": "NEH"
+        }
+      ]
+    }
+  ],
+  "directives": [
+    {
+      "from": "Bobley",
+      "to": "!Division Directors",
+      "date": "2025-02-07",
+      "exhibit": "Ex. 4",
+      "summary": "Bobley distributes review criteria based on OMB memo M-25-13 (Jan 27, 2025); Instructs division dire"
+    },
+    {
+      "from": "Nate Cavanaugh",
+      "to": "McDonald, Michael",
+      "date": "2025-03-12",
+      "exhibit": "Ex. 27",
+      "summary": "CRITICAL: Cavanaugh sends McDonald complete list of Biden-era NEH grants; 1,295 grants totaling $376"
+    },
+    {
+      "from": "Wolfson",
+      "to": "nate.cavanaugh@gsa.gov, justin.fox@gsa.gov",
+      "date": "2025-03-13",
+      "exhibit": "Ex. 8",
+      "summary": "Wolfson shares Brett's award spreadsheet link with DOGE team (Cavanaugh, Fox); First documented cont"
+    },
+    {
+      "from": "Fox",
+      "to": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfs",
+      "date": "2025-03-17",
+      "exhibit": "Ex. 30",
+      "summary": "CRITICAL COMPREHENSIVE REVIEW: Fox sends DOGE's full review of NEH grants, employees, and contracts;"
+    },
+    {
+      "from": "Justin Fox",
+      "to": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfs",
+      "date": "2025-03-19",
+      "exhibit": "Ex. 13",
+      "summary": "DOGE independently reviewed grants NEH staff marked as N/A for DEI; DOGE flagged some N/A grants as "
+    },
+    {
+      "from": "Justin Fox",
+      "to": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfs",
+      "date": "2025-03-28",
+      "exhibit": "Ex. 15",
+      "summary": "Fox sends ~440 active grants marked N/A by staff for McDonald review; Fox attaches proposed RIF (red"
+    },
+    {
+      "from": "Justin Fox",
+      "to": "McDonald, Michael (mmcdonald@neh.gov), Wolfson, Adam (awolfs",
+      "date": "2025-03-28",
+      "exhibit": "Ex. 17",
+      "summary": "McDonald recaps two spreadsheet tracks: (1) Brett's list reviewed by McDonald/Wolfson sent to OMB, ("
+    },
+    {
+      "from": "McDonald",
+      "to": "Justin Fox (justin.fox@gsa.gov)",
+      "date": "2025-03-30",
+      "exhibit": "Ex. 15",
+      "summary": "Fox sends ~440 active grants marked N/A by staff for McDonald review; Fox attaches proposed RIF (red"
+    },
+    {
+      "from": "Justin Fox",
+      "to": "McDonald, Michael (mmcdonald@neh.gov)",
+      "date": "2025-03-31",
+      "exhibit": "Ex. 15",
+      "summary": "Fox sends ~440 active grants marked N/A by staff for McDonald review; Fox attaches proposed RIF (red"
+    },
+    {
+      "from": "McDonald",
+      "to": "Justin Fox (justin.fox@gsa.gov), Wolfson, Adam (awolfson@neh",
+      "date": "2025-03-31",
+      "exhibit": "Ex. 17",
+      "summary": "McDonald recaps two spreadsheet tracks: (1) Brett's list reviewed by McDonald/Wolfson sent to OMB, ("
+    },
+    {
+      "from": "McDonald",
+      "to": "Justin Fox (justin.fox@gsa.gov)",
+      "date": "2025-04-01",
+      "exhibit": "Ex. 5",
+      "summary": "McDonald sends N/A spreadsheet to Fox with annotations; McDonald expresses concern: N/A grants 'have"
+    },
+    {
+      "from": "McDonald",
+      "to": "Justin Fox (justin.fox@gsa.gov)",
+      "date": "2025-04-01",
+      "exhibit": "Ex. 23",
+      "summary": "Complete termination approval chain from morning to night on April 1-2, 2025; McDonald sends N/A spr"
+    },
+    {
+      "from": "McDonald",
+      "to": "Justin Fox (justin.fox@gsa.gov), Wolfson, Adam (awolfson@neh",
+      "date": "2025-04-02",
+      "exhibit": "Ex. 23",
+      "summary": "Complete termination approval chain from morning to night on April 1-2, 2025; McDonald sends N/A spr"
+    }
+  ]
+}
