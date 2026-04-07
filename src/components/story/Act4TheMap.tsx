@@ -102,7 +102,12 @@ const steps: ScrollyStep[] = [
         <p className="text-lg font-bold text-green-400">
           State Humanities Councils
         </p>
-        <p className="mt-2 text-gray-300">
+        <img
+          src={import.meta.env.BASE_URL + "story/images/state-humanities.jpg"}
+          alt="State humanities council community program"
+          className="mt-3 h-32 w-full rounded-lg object-cover opacity-80"
+        />
+        <p className="mt-3 text-gray-300">
           $187 million in state council funding terminated — the largest single
           category. These councils run local programs in every state: reading
           groups, speaker series, teacher workshops, community archives.
@@ -117,7 +122,12 @@ const steps: ScrollyStep[] = [
         <p className="text-lg font-bold text-purple-400">
           Research Universities
         </p>
-        <p className="mt-2 text-gray-300">
+        <img
+          src={import.meta.env.BASE_URL + "story/images/central-asians-1991.png"}
+          alt="Central Asians Remember 1991 — Indiana University grant"
+          className="mt-3 h-32 w-full rounded-lg object-cover opacity-80"
+        />
+        <p className="mt-3 text-gray-300">
           Major research institutions saw dozens of grants each terminated: Yale,
           Michigan, Indiana, UCLA. Projects ranging from ancient archaeology to
           Civil War archives to digital newspaper preservation.
